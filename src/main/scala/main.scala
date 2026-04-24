@@ -1,6 +1,6 @@
 package org.interscity.htc
 
-import core.HyperbolicTimeChamber
+import core.SimEDaPE
 
 @main
-def main(): Unit = HyperbolicTimeChamber.start()
+def main(): Unit = SimEDaPE.start()

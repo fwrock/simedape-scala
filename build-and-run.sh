@@ -1,30 +1,31 @@
 #!/bin/bash
 set -e
 
-PROJECT_NAME="hyperbolic-time-chamber"
+PROJECT_NAME="simedape"
 SCALA_VERSION="3.3.5"
-HTC_SCENARIO_NAME="${HTC_SCENARIO_NAME:-htc_scenario}"
 
 echo "🚀 Step 1: Cleaning old build..."
 sbt clean
 
-echo "📦 Step 2: Compiling and generating JAR..."
+echo "📦 Step 2: Compiling and generating fat JAR..."
 sbt assembly
 
-JAR_FILE="target/scala-${SCALA_VERSION}/${PROJECT_NAME}-1.24.3.jar"
+JAR_FILE="target/scala-${SCALA_VERSION}/${PROJECT_NAME}.jar"
 
 if [[ ! -f "$JAR_FILE" ]]; then
     echo "❌ Error: JAR not found at $JAR_FILE"
     exit 1
 fi
 
-echo "🐳 Step 3: Building docker image..."
+echo "🐳 Step 3: Building Docker image..."
 docker build -t ${PROJECT_NAME}:latest .
 
-echo "📦 Step 4: Deploying with docker compose..."
-echo "   • Scenario: ${HTC_SCENARIO_NAME}"
-echo "   • Config:   /app/hyperbolic-time-chamber/simulations/input/${HTC_SCENARIO_NAME}/simulation.json"
-echo "   • City map: /app/hyperbolic-time-chamber/simulations/input/${HTC_SCENARIO_NAME}/data/city_map.json"
-docker compose up node1 --build
+echo "📦 Step 4: Starting with docker compose..."
+echo "   Make sure .env is configured (cp .env.example .env)"
+echo "   The simulator's Docker network must exist before running."
+docker compose up
 
-echo "✅ Application is running with docker compose!"
+echo "✅ SimEDaPE is running!"
+echo "   Health:  http://localhost:${SIMEDAPE_HTTP_PORT:-9000}/health"
+echo "   API:     http://localhost:${SIMEDAPE_HTTP_PORT:-9000}/api/v1/pipeline/status"
+echo "   Logs:    docker compose logs -f simedape"

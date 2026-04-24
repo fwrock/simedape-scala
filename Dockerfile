@@ -1,12 +1,19 @@
-FROM eclipse-temurin:21-jdk
+FROM eclipse-temurin:21-jre-jammy
 
 WORKDIR /app
 
-RUN mkdir -p /app/logs
+RUN mkdir -p /app/logs /tmp/simedape/warping_paths /data/simulations
 
-COPY target/scala-3.3.5/hyperbolic-time-chamber-1.24.3.jar app.jar
+# Fat JAR produced by `sbt assembly`
+COPY target/scala-3.3.5/simedape.jar app.jar
 
-EXPOSE 1600-2700
+# REST API
+EXPOSE 8080
 
-#"-Djdk.attach.allowAttachSelf=true" if you want measure memory object storage
-CMD ["java", "-XX:+ZGenerational", "-jar", "app.jar"]
+# JVM flags:
+#   -XX:+ZGenerational   — low-latency GC (JDK 21+)
+#   -Djdk.attach.allowAttachSelf=true  — uncomment to profile memory
+CMD ["java", \
+     "-XX:+ZGenerational", \
+     "-XX:MaxRAMPercentage=75.0", \
+     "-jar", "app.jar"]
