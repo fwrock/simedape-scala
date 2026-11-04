@@ -31,6 +31,18 @@ Python is not required for native SimEDaPE computation or the core API.
 Optional HTC control routes depend on the configured external service. Development-only Python
 scripts regenerate numerical reference fixtures.
 
+## Library dependencies
+
+```text
+simedape-scala -> org.htc:tslearn4j:1.1.0-SNAPSHOT -> OpenBLAS/LAPACK (JavaCPP)
+```
+
+Scala calls the Java library directly in the same JVM. Exact constrained warping
+paths are provided by `org.tslearn.metrics.ConstrainedDTW` in `tslearn4j`.
+The separate `simedape-warping-path` repository is a standalone approximate FastDTW
+application; it is not imported or invoked by this native pipeline. The Python
+SimEDaPE implementation retains its Python numerical dependencies.
+
 ## Run a pipeline
 
 ```bash
