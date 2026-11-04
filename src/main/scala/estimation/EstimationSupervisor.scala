@@ -63,6 +63,9 @@ object EstimationSupervisor:
               warpingPaths           = clusterPaths,
               percentSample          = cfg.percentSample,
               replyTo                = ctx.self.asInstanceOf[ActorRef[EstimationWorkerReply]],
+              method                 = cfg.method,
+              pcaComponents          = cfg.pcaComponents,
+              baseSeries             = if cfg.method == EstimationMethod.PCA then members.map(baseDs.normalised) else Array.empty,
             )
 
           Behaviors.receiveMessage[EstimationSupervisorCommand | EstimationWorkerReply] {
@@ -104,23 +107,29 @@ object EstimationWorker:
             clusterId, simPointIdx, memberIndices,
             baseMeans, baseStds, partialMeans, partialStds,
             simPointSeriesPartial, warpingPaths,
-            percentSample, replyTo) =>
+            percentSample, replyTo, method, baseSeries, pcaComponents) =>
 
         val result = Try {
-          memberIndices.zipWithIndex.flatMap { case (seriesIdx, pos) =>
-            warpingPaths.get(seriesIdx) match
-              case None =>
-                None  // no warping path — skip (missing sim point)
+          if method == EstimationMethod.PCA then
+            val model = PCAEstimator.fitCluster(baseSeries, pcaComponents)
+            val rows = PCAEstimator.estimateCluster(model, simPointSeriesPartial, memberIndices.length, baseMeans, baseStds)
+            memberIndices.zip(rows).toMap
+          else
+            memberIndices.zipWithIndex.flatMap { case (seriesIdx, pos) =>
+              warpingPaths.get(seriesIdx) match
+                case None =>
+                  None  // no warping path — skip (missing sim point)
 
-              case Some(path) =>
-                val (mu, sigma) = blendNormParams(
-                  baseMeans(pos), baseStds(pos),
-                  partialMeans(pos), partialStds(pos),
-                  percentSample,
-                )
-                val estimated = TimeTranslation.estimate(path, simPointSeriesPartial, mu, sigma)
-                Some(seriesIdx -> estimated)
-          }.toMap
+                case Some(path) =>
+                  val (mu, sigma) = blendNormParams(
+                    baseMeans(pos), baseStds(pos),
+                    partialMeans(pos), partialStds(pos),
+                    percentSample, method,
+                  )
+                  val estimated = TimeTranslation.estimate(path, simPointSeriesPartial, mu, sigma)
+                  Some(seriesIdx -> estimated)
+            }.toMap
+
         }
 
         result.fold(
@@ -134,6 +143,10 @@ object EstimationWorker:
   private def blendNormParams(
       baseMu: Double, baseSigma: Double,
       partialMu: Double, partialSigma: Double,
-      percentSample: Double,
+      percentSample: Double, method: EstimationMethod,
   ): (Double, Double) =
-    TimeTranslation.muSigmaWAvg(baseMu, baseSigma, partialMu, partialSigma, percentSample)
+    method match
+      case EstimationMethod.Base => TimeTranslation.muSigmaBase(baseMu, baseSigma)
+      case EstimationMethod.Avg => TimeTranslation.muSigmaAvg(baseMu, baseSigma, partialMu, partialSigma)
+      case EstimationMethod.Sample => TimeTranslation.muSigmaSample(partialMu, partialSigma)
+      case _ => TimeTranslation.muSigmaWAvg(baseMu, baseSigma, partialMu, partialSigma, percentSample)

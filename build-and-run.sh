@@ -2,7 +2,7 @@
 set -e
 
 PROJECT_NAME="simedape"
-SCALA_VERSION="3.3.5"
+SCALA_VERSION="3.3.9"
 
 echo "🚀 Step 1: Cleaning old build..."
 sbt clean

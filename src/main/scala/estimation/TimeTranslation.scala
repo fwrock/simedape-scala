@@ -46,14 +46,16 @@ object TimeTranslation:
       if t0.descending then sNew(t0.i) - t0.cost
       else                   sNew(t0.i) + t0.cost
 
-    // Remaining steps — use incremental cost (Pythagorean difference)
-    for pos <- 1 until path.length do
-      val t    = path(pos)
-      val prev = path(pos - 1)
+    // A warping path is a List: indexing it inside a loop is quadratic.
+    var prev = t0
+    val remaining = path.iterator.drop(1)
+    while remaining.hasNext do
+      val t = remaining.next()
       val diff = math.sqrt(math.max(0.0, t.cost * t.cost - prev.cost * prev.cost))
       result(t.j) =
         if t.descending then sNew(t.i) - diff
         else                  sNew(t.i) + diff
+      prev = t
 
     result
 

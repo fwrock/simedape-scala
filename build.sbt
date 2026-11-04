@@ -3,13 +3,20 @@ import scala.collection.Seq
 
 ThisBuild / version := "1.0.0"
 
-ThisBuild / scalaVersion := "3.3.5"
+ThisBuild / scalaVersion := "3.3.9"
+ThisBuild / javacOptions ++= Seq("--release", "21")
+ThisBuild / scalacOptions ++= Seq("-release", "21")
+initialize := {
+  val previous = initialize.value
+  require(java.lang.Runtime.version().feature() >= 21, "Build with JDK 21 or newer")
+  previous
+}
 
 // Apache Pekko
-val pekkoVersion           = "1.4.0"
-val pekkoHttpVersion       = "1.3.0"
-val jacksonVersion         = "2.21.2"
-val kryoVersion            = "1.5.0"
+val pekkoVersion           = "1.7.1"
+val pekkoHttpVersion       = "1.4.2"
+val jacksonVersion         = "2.22.4"
+val kryoVersion            = "1.5.2"
 
 // Logs
 val logbackVersion = "1.5.32"
@@ -20,16 +27,16 @@ val scalaTestVersion = "3.2.20"
 // ClickHouse
 val clickhouseVersion = "0.7.0"
 
-// ND4J (PCA)
-val nd4jVersion = "1.0.0-M2.1"
-
 // Apache Commons Math (transitive via tslearn4j, explicit for safety)
 val commonsMathVersion = "3.6.1"
 
 // Prometheus Metrics
 val prometheusVersion = "0.16.0"
 
-resolvers += Resolver.mavenLocal
+resolvers ++= Seq(
+  Resolver.mavenLocal,
+  "Maven Central Apache" at "https://repo.maven.apache.org/maven2",
+)
 
 lazy val root = (project in file("."))
   .settings(
@@ -38,7 +45,8 @@ lazy val root = (project in file("."))
     assembly / assemblyJarName := "simedape.jar",
     assembly / mainClass := Some("org.interscity.htc.main"),
     assembly / assemblyMergeStrategy := {
-      case PathList("META-INF", "services", _*) => MergeStrategy.concat
+      case PathList("META-INF", "services", _*) => MergeStrategy.filterDistinctLines
+      case PathList("META-INF", "maven", "org.bytedeco", _*) => MergeStrategy.first
       case PathList("META-INF", _*)             => MergeStrategy.discard
       case "reference.conf"                     => MergeStrategy.concat
       case "application.conf"                   => MergeStrategy.concat
@@ -74,9 +82,6 @@ lazy val root = (project in file("."))
 
       // Apache Commons Math (transitive via tslearn4j; explicit for reliability)
       "org.apache.commons" % "commons-math3" % commonsMathVersion,
-
-      // ND4J — accelerated linear algebra for PCA estimation
-      "org.nd4j" % "nd4j-native-platform" % nd4jVersion,
 
       // Logs
       "ch.qos.logback" % "logback-classic" % logbackVersion,

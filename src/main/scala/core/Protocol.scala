@@ -164,7 +164,10 @@ object Protocol:
       simPointSeriesPartial: Array[Double],
       warpingPaths: Map[Int, WarpingPath],
       percentSample: Double,
-      replyTo: ActorRef[EstimationWorkerReply]
+      replyTo: ActorRef[EstimationWorkerReply],
+      method: EstimationMethod = EstimationMethod.WAvg,
+      baseSeries: Array[Array[Double]] = Array.empty[Array[Double]],
+      pcaComponents: Int = 1
   ) extends EstimationWorkerCommand
 
   sealed trait EstimationWorkerReply

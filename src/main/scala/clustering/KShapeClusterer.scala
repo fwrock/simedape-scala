@@ -6,6 +6,7 @@ import org.apache.pekko.actor.typed.scaladsl.*
 
 import org.tslearn.clustering.KShape
 import org.tslearn.utils.MatrixUtils
+import org.apache.commons.math3.linear.Array2DRowRealMatrix
 
 import core.SimEDaPEConfig
 import core.Protocol.*
@@ -44,8 +45,8 @@ object KShapeClusterer:
 
     // Convert to tslearn4j format: RealMatrix[] where each is [length × 1]
     val tsData = dataset.normalised.map { series =>
-      val matrix = Array.tabulate(length, 1)((i, _) => series(i))
-      MatrixUtils.toTimeSeriesDataset(matrix)(0)
+      require(series.length == length, "All series must have the same length")
+      new Array2DRowRealMatrix(series): org.apache.commons.math3.linear.RealMatrix
     }
 
     val kshape = new KShape(

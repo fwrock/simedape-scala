@@ -31,15 +31,19 @@ object WarpingPathSupervisor:
           var completed  = 0
           var failed     = false
 
-          // Spawn a worker per cluster
-          for clusterIdx <- 0 until k do
+          require(cfg.workerParallelism > 0, "workerParallelism must be positive")
+          var nextCluster = 0
+          def launchNext(): Unit =
+            val clusterIdx = nextCluster
+            nextCluster += 1
             val members  = clustering.membersOf(clusterIdx)
             val centroid = clustering.centroids(clusterIdx)
             val memberSeries = members.map(dataset.normalised)
 
             val worker = ctx.spawn(
               WarpingPathWorker(),
-              s"wp-worker-$clusterIdx"
+              s"wp-worker-$clusterIdx",
+              DispatcherSelector.fromConfig("pekko.actor.compute-dispatcher")
             )
             worker ! ComputeClusterWarpingPaths(
               clusterId     = clusterIdx,
@@ -50,12 +54,15 @@ object WarpingPathSupervisor:
               replyTo       = ctx.self.asInstanceOf[ActorRef[WarpingWorkerReply]],
             )
 
+          for _ <- 0 until math.min(k, cfg.workerParallelism) do launchNext()
+
           // Collect replies
           Behaviors
             .receiveMessage[WarpingSupervisorCommand | WarpingWorkerReply] {
               case ClusterWarpingPathsDone(clusterId, paths) if !failed =>
                 pending(clusterId) = paths
                 completed += 1
+                if nextCluster < k then launchNext()
                 progressTo ! SubProgressUpdate(PipelinePhase.WarpingPaths, completed, k)
                 ctx.log.debug("Warping paths done for cluster {}/{}", completed, k)
                 if completed == k then

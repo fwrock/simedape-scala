@@ -15,13 +15,11 @@ import data.Models.*
  * This mirrors Python's `TimeSeriesScalerSimEDaPE`:
  *   z_i = (x_i - μ_i) / σ_i
  *
- * A small epsilon is used when σ_i = 0 to avoid division by zero.
+ * Constant series use a scale of 1, matching the Python implementation.
  *
  * The actor is stateless — it can handle multiple sequential requests.
  */
 object TimeSeriesPreprocessor:
-
-  private val Eps = 1e-8
 
   def apply(cfg: SimEDaPEConfig): Behavior[PreprocessorCommand] =
     Behaviors.receiveMessage {
@@ -37,7 +35,8 @@ object TimeSeriesPreprocessor:
         for i <- 0 until n do
           val values = dataset.series(i).values
           val mu     = mean(values)
-          val sigma  = std(values, mu).max(Eps)
+          val rawStd = std(values, mu)
+          val sigma = if rawStd == 0.0 then 1.0 else rawStd
           means(i)   = mu
           stds(i)    = sigma
           normalised(i) = values.map(v => (v - mu) / sigma)

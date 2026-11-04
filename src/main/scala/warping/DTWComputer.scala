@@ -41,14 +41,15 @@ object DTWComputer:
   ): (WarpingPath, Double) =
     val r      = s1.length
     val c      = s2.length
-    val window = math.floor(c * windowFraction).toInt.max(1)
+    require(r > 0 && c > 0, "DTW requires nonempty series")
+    require(windowFraction >= 0.0 && windowFraction.isFinite, "Invalid DTW window fraction")
+    val requested = math.floor(c * windowFraction).toInt
+    val window = if requested == 0 then math.max(r, c) else requested
 
     val matrix = buildMatrix(s1, s2, r, c, window)
-    val path   = bestPath(matrix, s1, s2, r, c)
-
-    val dist =
-      if Psi == 0 then matrix(r)(c.min(c + window - 1))
-      else extractPsiDistance(matrix, r, c, window)
+    // Mark the relaxed suffix before backtracking, just like dtaidistance.
+    val dist = extractPsiDistance(matrix, r, c, window)
+    val path = bestPath(matrix, s1, s2, r, c)
 
     (path, dist)
 
@@ -99,29 +100,17 @@ object DTWComputer:
     var i = r
     var j = c
 
-    // Append last cell if not flagged -1
-    if dtw(i)(j) != -1.0 then
-      steps += WarpingStep(i - 1, j - 1, dtw(i)(j), s1(i - 1) > s2(j - 1))
-
-    while i > 1 && j > 1 do
+    while i > 0 && j > 0 do
+      if dtw(i)(j) != -1.0 then
+        steps += WarpingStep(i - 1, j - 1, dtw(i)(j), s1(i - 1) > s2(j - 1))
       val diag = dtw(i - 1)(j - 1)
       val up   = dtw(i - 1)(j)
       val left = dtw(i)(j - 1)
       val minVal = math.min(diag, math.min(up, left))
       if minVal == diag then
         i -= 1; j -= 1
-      else if minVal == up then
-        i -= 1
-      else
-        j -= 1
-
-      if dtw(i)(j) != -1.0 then
-        val si = (i - 1).max(0)
-        val sj = (j - 1).max(0)
-        steps += WarpingStep(si, sj, dtw(i)(j), s1(si) > s2(sj))
-
-    // Remove the (0,0) anchor cell and reverse to get start→end order
-    if steps.nonEmpty then steps.remove(steps.length - 1)
+      else if minVal == up then i -= 1
+      else j -= 1
     steps.reverseIterator.toList
 
   // ── psi distance extraction ────────────────────────────────────────────────
@@ -132,7 +121,15 @@ object DTWComputer:
       c: Int,
       window: Int,
   ): Double =
-    val ic = c.min(c + window - 1)
-    val vr = (math.max(0, r - Psi) to r).map(k => dtw(k)(ic))
-    val vc = (math.max(0, ic - Psi) to ic).map(k => dtw(r)(k))
-    math.min(vr.min, vc.min)
+    val rowStart = math.max(0, r - Psi)
+    val colStart = math.max(0, c - Psi)
+    val rowBest = (rowStart to r).minBy(k => dtw(k)(c))
+    val colBest = (colStart to c).minBy(k => dtw(r)(k))
+    if dtw(rowBest)(c) < dtw(r)(colBest) then
+      val distance = dtw(rowBest)(c)
+      for i <- rowBest + 1 to r do dtw(i)(c) = -1.0
+      distance
+    else
+      val distance = dtw(r)(colBest)
+      for j <- colBest + 1 to c do dtw(r)(j) = -1.0
+      distance
