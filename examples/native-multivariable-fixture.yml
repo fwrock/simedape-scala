@@ -1,0 +1,28 @@
+# Bounded example using the checked-in golden dataset; run from the repository root.
+# Change output_dir for subsequent runs; existing experiments are never overwritten.
+config:
+  scenario_name: multivariable-fixture
+  output_dir: output/multivariable-fixture
+stages:
+  - name: multivariable_experiment
+    params:
+      base_dir: src/test/resources/parity
+      experiment_config:
+        dataset: experiment-dataset.npz
+        training_runs: [r0, r1, r2]
+        test_runs: [r3]
+        experiment: masked
+        mask: prefix
+        fractions: [0.4]
+        seeds: [42]
+        models:
+          - name: joint-pca
+            method: pca
+            clustering: joint
+            n_clusters: 2
+            n_components: 2
+          - name: joint-dtw
+            method: dtw
+            clustering: joint
+            warping: dependent
+            n_clusters: 2

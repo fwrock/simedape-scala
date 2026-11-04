@@ -1,0 +1,5471 @@
+{
+  "cases": [
+    {
+      "selection": {
+        "random": [
+          0,
+          5,
+          6
+        ],
+        "medoid": [
+          3,
+          1,
+          6
+        ],
+        "centroid_nearest": [
+          3,
+          1,
+          6
+        ],
+        "pca": [
+          0,
+          2,
+          1
+        ],
+        "coverage": [
+          0,
+          1,
+          2
+        ]
+      },
+      "distinct_selection": {
+        "random": [
+          3,
+          7
+        ],
+        "medoid": [
+          3,
+          1
+        ],
+        "centroid_nearest": [
+          3,
+          1
+        ],
+        "pca": [
+          0,
+          2
+        ],
+        "coverage": [
+          0,
+          1
+        ]
+      },
+      "config": {
+        "method": "pca",
+        "clustering": "joint",
+        "warping": "dependent",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      "prediction": [
+        [
+          [
+            2.9878955404477656,
+            9.041512789090264
+          ],
+          [
+            3.5074777671347808,
+            8.774952834296556
+          ],
+          [
+            3.7130737063197277,
+            8.336148308639762
+          ],
+          [
+            4.264156261702256,
+            7.88913201859981
+          ],
+          [
+            3.8743650211289267,
+            7.264226406518867
+          ]
+        ],
+        [
+          [
+            4.046759362925887,
+            10.93982850000265
+          ],
+          [
+            4.744643191973653,
+            10.814428560563666
+          ],
+          [
+            5.006367353059285,
+            11.470841630004973
+          ],
+          [
+            4.901366995497488,
+            9.811254809463993
+          ],
+          [
+            4.270186525221578,
+            9.331766872824808
+          ]
+        ],
+        [
+          [
+            5.064282352543132,
+            13.008078143208488
+          ],
+          [
+            5.793854043122449,
+            12.808653620599245
+          ],
+          [
+            6.002673375101481,
+            12.040802057877917
+          ],
+          [
+            5.4058738980831,
+            11.808800624740796
+          ],
+          [
+            4.601530989542884,
+            11.322319235647951
+          ]
+        ]
+      ],
+      "summary": {
+        "method": "pca",
+        "clustering": "joint",
+        "warping": "dependent",
+        "coverage_fallback": "training",
+        "window": null,
+        "scaling": "global",
+        "pca_layout": "series",
+        "training_runs": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "blocks": [
+          {
+            "context": "all",
+            "variables": [
+              "count",
+              "speed"
+            ],
+            "cluster_sizes": [
+              3,
+              6
+            ],
+            "centroids": [
+              [
+                [
+                  -1.8649428499481442,
+                  -0.6873588511076045
+                ],
+                [
+                  -1.3082018403316897,
+                  -0.8020887091168895
+                ],
+                [
+                  -0.8134283994261594,
+                  -1.0437823250863592
+                ],
+                [
+                  -0.6014091313057729,
+                  -1.3913522854713396
+                ],
+                [
+                  -0.7483600113106811,
+                  -1.6921832261969059
+                ]
+              ],
+              [
+                [
+                  -0.02737095013863533,
+                  0.9879782884445131
+                ],
+                [
+                  0.859979878916809,
+                  0.8964188113960798
+                ],
+                [
+                  1.1833853162484627,
+                  0.7332188919173136
+                ],
+                [
+                  0.7527660616198588,
+                  0.2920115741695151
+                ],
+                [
+                  -0.10058919048525693,
+                  0.02095828121499203
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "b|0"
+            ]
+          }
+        ]
+      },
+      "diagnostics": [
+        {
+          "series": 0,
+          "variables": [
+            "count",
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 4,
+          "rank": 2,
+          "condition": 6.499336389501892,
+          "components": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "count",
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 4,
+          "rank": 2,
+          "condition": 5.010400368423311,
+          "components": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "count",
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 4,
+          "rank": 2,
+          "condition": 5.010400368423311,
+          "components": 2
+        },
+        {
+          "series": 0,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 1,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 2,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        }
+      ],
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.05694315340843121,
+          "rmse": 0.08371669133483071,
+          "bias": 0.0433263114749802,
+          "quantile_errors": {
+            "0.1": 0.00018509261358756746,
+            "0.5": 0.01197626886997849,
+            "0.9": 0.02717326512357321,
+            "0.99": 0.07517566457954228
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.2197680558212237,
+          "rmse": 0.4152559276386717,
+          "bias": 0.13439038132167733,
+          "quantile_errors": {
+            "0.1": 0.06541465256244194,
+            "0.5": 0.14452757960474827,
+            "0.9": 0.05386847100374759,
+            "0.99": 0.33497041623945023
+          },
+          "negative_predictions": 0
+        }
+      }
+    },
+    {
+      "selection": {
+        "random": [
+          0,
+          5,
+          6
+        ],
+        "medoid": [
+          3,
+          7,
+          6
+        ],
+        "centroid_nearest": [
+          3,
+          7,
+          6
+        ],
+        "pca": [
+          0,
+          2,
+          1
+        ],
+        "coverage": [
+          0,
+          1,
+          2
+        ]
+      },
+      "distinct_selection": {
+        "random": [
+          3,
+          7
+        ],
+        "medoid": [
+          3,
+          7
+        ],
+        "centroid_nearest": [
+          3,
+          7
+        ],
+        "pca": [
+          0,
+          2
+        ],
+        "coverage": [
+          0,
+          1
+        ]
+      },
+      "config": {
+        "method": "pca",
+        "clustering": "separate",
+        "warping": "independent",
+        "pca_layout": "observations",
+        "group_by_context": true,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      "prediction": [
+        [
+          [
+            2.9878955404477656,
+            9.041512789090264
+          ],
+          [
+            3.5074777671347808,
+            8.774952834296556
+          ],
+          [
+            3.660642850815764,
+            8.242396902308565
+          ],
+          [
+            3.660642850815764,
+            8.242396902308565
+          ],
+          [
+            3.660642850815764,
+            8.242396902308565
+          ]
+        ],
+        [
+          [
+            4.046759362925887,
+            10.93982850000265
+          ],
+          [
+            4.744643191973653,
+            10.814428560563666
+          ],
+          [
+            3.660642850815764,
+            10.236609327788065
+          ],
+          [
+            3.660642850815764,
+            10.236609327788065
+          ],
+          [
+            3.660642850815764,
+            10.236609327788065
+          ]
+        ],
+        [
+          [
+            5.064282352543132,
+            13.008078143208488
+          ],
+          [
+            5.793854043122449,
+            12.808653620599245
+          ],
+          [
+            5.366894865492792,
+            12.243098828012158
+          ],
+          [
+            5.366894865492792,
+            12.243098828012158
+          ],
+          [
+            5.366894865492792,
+            12.243098828012158
+          ]
+        ]
+      ],
+      "summary": {
+        "method": "pca",
+        "clustering": "separate",
+        "warping": "independent",
+        "coverage_fallback": "training",
+        "window": null,
+        "scaling": "global",
+        "pca_layout": "observations",
+        "training_runs": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "blocks": [
+          {
+            "context": "g0",
+            "variables": [
+              "count"
+            ],
+            "cluster_sizes": [
+              3,
+              3
+            ],
+            "centroids": [
+              [
+                [
+                  -1.8649428499481442
+                ],
+                [
+                  -1.3082018403316897
+                ],
+                [
+                  -0.8134283994261594
+                ],
+                [
+                  -0.6014091313057729
+                ],
+                [
+                  -0.7483600113106811
+                ]
+              ],
+              [
+                [
+                  -0.6325536696067106
+                ],
+                [
+                  0.17440692313201375
+                ],
+                [
+                  0.5566263282970163
+                ],
+                [
+                  0.40459298109072545
+                ],
+                [
+                  -0.26384157111864115
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "b|0"
+            ]
+          },
+          {
+            "context": "g0",
+            "variables": [
+              "speed"
+            ],
+            "cluster_sizes": [
+              3,
+              3
+            ],
+            "centroids": [
+              [
+                [
+                  -0.6873588511076045
+                ],
+                [
+                  -0.8020887091168895
+                ],
+                [
+                  -1.0437823250863592
+                ],
+                [
+                  -1.3913522854713396
+                ],
+                [
+                  -1.6921832261969059
+                ]
+              ],
+              [
+                [
+                  0.4161214273648614
+                ],
+                [
+                  0.34024940498045636
+                ],
+                [
+                  0.07028707743050878
+                ],
+                [
+                  -0.2729314240708057
+                ],
+                [
+                  -0.5413453350334284
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "b|0"
+            ]
+          },
+          {
+            "context": "g1",
+            "variables": [
+              "count"
+            ],
+            "cluster_sizes": [
+              1,
+              2
+            ],
+            "centroids": [
+              [
+                [
+                  0.48239563262632895
+                ],
+                [
+                  1.5023471421234442
+                ],
+                [
+                  1.7931839693955687
+                ],
+                [
+                  1.0443684953506804
+                ],
+                [
+                  0.008335018481271259
+                ]
+              ],
+              [
+                [
+                  0.6255198376809954
+                ],
+                [
+                  1.5671556809906844
+                ],
+                [
+                  1.8186244716020794
+                ],
+                [
+                  1.1292244655481483
+                ],
+                [
+                  0.08982727598155532
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "c|0",
+              "c|0"
+            ]
+          },
+          {
+            "context": "g1",
+            "variables": [
+              "speed"
+            ],
+            "cluster_sizes": [
+              2,
+              1
+            ],
+            "centroids": [
+              [
+                [
+                  1.5497096783056197
+                ],
+                [
+                  1.4424116722311515
+                ],
+                [
+                  1.1787625366752184
+                ],
+                [
+                  0.864420048661608
+                ],
+                [
+                  0.5922933581072674
+                ]
+              ],
+              [
+                [
+                  1.580086091961254
+                ],
+                [
+                  1.472941308972806
+                ],
+                [
+                  1.1679952313751139
+                ],
+                [
+                  0.8420236199062917
+                ],
+                [
+                  0.5651989761757026
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "c|0",
+              "c|0"
+            ]
+          }
+        ]
+      },
+      "diagnostics": [
+        {
+          "series": 0,
+          "variables": [
+            "count"
+          ],
+          "cluster": 0,
+          "observations": 2,
+          "per_time": [
+            {
+              "observations": 1,
+              "rank": 1,
+              "condition": 1.0,
+              "components": 1
+            },
+            {
+              "observations": 1,
+              "rank": 1,
+              "condition": 1.0,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            }
+          ]
+        },
+        {
+          "series": 0,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2,
+          "per_time": [
+            {
+              "observations": 1,
+              "rank": 1,
+              "condition": 1.0,
+              "components": 1
+            },
+            {
+              "observations": 1,
+              "rank": 1,
+              "condition": 1.0,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            }
+          ]
+        },
+        {
+          "series": 1,
+          "variables": [
+            "count"
+          ],
+          "cluster": 0,
+          "observations": 2,
+          "per_time": [
+            {
+              "observations": 1,
+              "rank": 1,
+              "condition": 1.0,
+              "components": 1
+            },
+            {
+              "observations": 1,
+              "rank": 1,
+              "condition": 1.0,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            }
+          ]
+        },
+        {
+          "series": 1,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 2,
+          "per_time": [
+            {
+              "observations": 1,
+              "rank": 1,
+              "condition": 1.0,
+              "components": 1
+            },
+            {
+              "observations": 1,
+              "rank": 1,
+              "condition": 1.0,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            }
+          ]
+        },
+        {
+          "series": 2,
+          "variables": [
+            "count"
+          ],
+          "cluster": 1,
+          "observations": 2,
+          "per_time": [
+            {
+              "observations": 1,
+              "rank": 1,
+              "condition": 1.0,
+              "components": 1
+            },
+            {
+              "observations": 1,
+              "rank": 1,
+              "condition": 1.0,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            }
+          ]
+        },
+        {
+          "series": 2,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2,
+          "per_time": [
+            {
+              "observations": 1,
+              "rank": 1,
+              "condition": 1.0,
+              "components": 1
+            },
+            {
+              "observations": 1,
+              "rank": 1,
+              "condition": 1.0,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            },
+            {
+              "observations": 0,
+              "rank": 0,
+              "condition": null,
+              "components": 1
+            }
+          ]
+        },
+        {
+          "series": 0,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 1,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 2,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        }
+      ],
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.5710884345165242,
+          "rmse": 0.7120245530699417,
+          "bias": -0.3983461801121051,
+          "quantile_errors": {
+            "0.1": 0.18127881473773533,
+            "0.5": 0.9289118698571421,
+            "0.9": 0.1311656628704112,
+            "0.99": 0.5128588868676758
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.5306041777730985,
+          "rmse": 0.6426573761931713,
+          "bias": 0.45561518243362037,
+          "quantile_errors": {
+            "0.1": 0.5436606586873856,
+            "0.5": 0.5698820979288204,
+            "0.9": 0.33402944564019066,
+            "0.99": 0.11411353145423853
+          },
+          "negative_predictions": 0
+        }
+      }
+    },
+    {
+      "selection": {
+        "random": [
+          0,
+          5,
+          6
+        ],
+        "medoid": [
+          3,
+          2,
+          6
+        ],
+        "centroid_nearest": [
+          3,
+          2,
+          6
+        ],
+        "pca": [
+          0,
+          2,
+          1
+        ],
+        "coverage": [
+          0,
+          1,
+          2
+        ]
+      },
+      "distinct_selection": {
+        "random": [
+          3,
+          7
+        ],
+        "medoid": [
+          3,
+          2
+        ],
+        "centroid_nearest": [
+          3,
+          2
+        ],
+        "pca": [
+          0,
+          2
+        ],
+        "coverage": [
+          0,
+          1
+        ]
+      },
+      "config": {
+        "method": "pca",
+        "clustering": "grouped",
+        "warping": "euclidean",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": [
+          [
+            "count"
+          ],
+          [
+            "speed"
+          ]
+        ],
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      "prediction": [
+        [
+          [
+            2.9878955404477656,
+            9.041512789090264
+          ],
+          [
+            3.5074777671347808,
+            8.774952834296556
+          ],
+          [
+            3.554487331605511,
+            9.289016976442332
+          ],
+          [
+            4.473109269671159,
+            7.730565831105441
+          ],
+          [
+            3.8375199869767003,
+            7.2233371404435935
+          ]
+        ],
+        [
+          [
+            4.046759362925887,
+            10.93982850000265
+          ],
+          [
+            4.744643191973653,
+            10.814428560563666
+          ],
+          [
+            5.0404379043385585,
+            9.390249043168811
+          ],
+          [
+            4.895756709386948,
+            9.724866161829516
+          ],
+          [
+            4.29928869944726,
+            9.261751765253186
+          ]
+        ],
+        [
+          [
+            5.064282352543132,
+            13.008078143208488
+          ],
+          [
+            5.793854043122449,
+            12.808653620599245
+          ],
+          [
+            6.014219377596176,
+            12.432134120413185
+          ],
+          [
+            5.415036554663854,
+            11.884883144960195
+          ],
+          [
+            4.622165545739793,
+            11.429001761708923
+          ]
+        ]
+      ],
+      "summary": {
+        "method": "pca",
+        "clustering": "grouped",
+        "warping": "euclidean",
+        "coverage_fallback": "training",
+        "window": null,
+        "scaling": "global",
+        "pca_layout": "series",
+        "training_runs": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "blocks": [
+          {
+            "context": "all",
+            "variables": [
+              "count"
+            ],
+            "cluster_sizes": [
+              3,
+              6
+            ],
+            "centroids": [
+              [
+                [
+                  -1.8649428499481442
+                ],
+                [
+                  -1.3082018403316897
+                ],
+                [
+                  -0.8134283994261594
+                ],
+                [
+                  -0.6014091313057729
+                ],
+                [
+                  -0.7483600113106811
+                ]
+              ],
+              [
+                [
+                  -0.02737095013863533
+                ],
+                [
+                  0.859979878916809
+                ],
+                [
+                  1.1833853162484627
+                ],
+                [
+                  0.7527660616198588
+                ],
+                [
+                  -0.10058919048525693
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "c|0"
+            ]
+          },
+          {
+            "context": "all",
+            "variables": [
+              "speed"
+            ],
+            "cluster_sizes": [
+              5,
+              4
+            ],
+            "centroids": [
+              [
+                [
+                  -0.24756175367882607
+                ],
+                [
+                  -0.34715186527730174
+                ],
+                [
+                  -0.7725272459206265
+                ],
+                [
+                  -0.9457039755522395
+                ],
+                [
+                  -1.2288004933029484
+                ]
+              ],
+              [
+                [
+                  1.2759004864345986
+                ],
+                [
+                  1.1770015168530796
+                ],
+                [
+                  0.9062141170024991
+                ],
+                [
+                  0.5766331165910674
+                ],
+                [
+                  0.2983006188034939
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "c|0"
+            ]
+          }
+        ]
+      },
+      "diagnostics": [
+        {
+          "series": 0,
+          "variables": [
+            "count"
+          ],
+          "cluster": 0,
+          "observations": 2,
+          "rank": 2,
+          "condition": 9.7218270613504,
+          "components": 2
+        },
+        {
+          "series": 0,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2,
+          "rank": 2,
+          "condition": 14.461260771632675,
+          "components": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "count"
+          ],
+          "cluster": 1,
+          "observations": 2,
+          "rank": 2,
+          "condition": 1.2565203298266285,
+          "components": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2,
+          "rank": 2,
+          "condition": 14.461260771632675,
+          "components": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "count"
+          ],
+          "cluster": 1,
+          "observations": 2,
+          "rank": 2,
+          "condition": 1.2565203298266285,
+          "components": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 2,
+          "rank": 2,
+          "condition": 37.1956085089411,
+          "components": 2
+        },
+        {
+          "series": 0,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 1,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 2,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        }
+      ],
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.10639628973858001,
+          "rmse": 0.16405623334873706,
+          "bias": 0.05581822856045049,
+          "quantile_errors": {
+            "0.1": 0.061008209651036704,
+            "0.5": 0.03261082506688684,
+            "0.9": 0.036812590887115526,
+            "0.99": 0.08653099940112252
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.2612710374535044,
+          "rmse": 0.44148691607818374,
+          "bias": 0.03333637921126679,
+          "quantile_errors": {
+            "0.1": 0.06961615064810811,
+            "0.5": 0.2764781866904329,
+            "0.9": 0.08526395767882633,
+            "0.99": 0.031141682910549306
+          },
+          "negative_predictions": 0
+        }
+      }
+    },
+    {
+      "selection": {
+        "random": [
+          0,
+          5,
+          6
+        ],
+        "medoid": [
+          3,
+          1,
+          6
+        ],
+        "centroid_nearest": [
+          3,
+          1,
+          6
+        ],
+        "pca": [
+          0,
+          2,
+          1
+        ],
+        "coverage": [
+          0,
+          1,
+          2
+        ]
+      },
+      "distinct_selection": {
+        "random": [
+          3,
+          7
+        ],
+        "medoid": [
+          3,
+          1
+        ],
+        "centroid_nearest": [
+          3,
+          1
+        ],
+        "pca": [
+          0,
+          2
+        ],
+        "coverage": [
+          0,
+          1
+        ]
+      },
+      "config": {
+        "method": "dtw",
+        "clustering": "joint",
+        "warping": "dependent",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      "prediction": [
+        [
+          [
+            2.9878955404477656,
+            9.041512789090264
+          ],
+          [
+            3.5074777671347808,
+            8.774952834296556
+          ],
+          [
+            3.8655863710574283,
+            8.383951776846487
+          ],
+          [
+            4.03676493675117,
+            7.765631357963681
+          ],
+          [
+            3.9181208102541847,
+            7.230458775510612
+          ]
+        ],
+        [
+          [
+            4.046759362925887,
+            10.93982850000265
+          ],
+          [
+            4.744643191973653,
+            10.814428560563666
+          ],
+          [
+            5.347204863289989,
+            11.69036829473813
+          ],
+          [
+            5.130088997710735,
+            10.760303986381915
+          ],
+          [
+            4.441113276883174,
+            10.278105278951712
+          ]
+        ],
+        [
+          [
+            5.064282352543132,
+            13.008078143208488
+          ],
+          [
+            5.793854043122449,
+            12.808653620599245
+          ],
+          [
+            5.477759221369737,
+            11.545203501926375
+          ],
+          [
+            5.130088997710735,
+            10.760303986381915
+          ],
+          [
+            4.441113276883174,
+            10.278105278951712
+          ]
+        ]
+      ],
+      "summary": {
+        "method": "dtw",
+        "clustering": "joint",
+        "warping": "dependent",
+        "coverage_fallback": "training",
+        "window": null,
+        "scaling": "global",
+        "pca_layout": "series",
+        "training_runs": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "blocks": [
+          {
+            "context": "all",
+            "variables": [
+              "count",
+              "speed"
+            ],
+            "cluster_sizes": [
+              3,
+              6
+            ],
+            "centroids": [
+              [
+                [
+                  -1.8649428499481442,
+                  -0.6873588511076045
+                ],
+                [
+                  -1.3082018403316897,
+                  -0.8020887091168895
+                ],
+                [
+                  -0.8134283994261594,
+                  -1.0437823250863592
+                ],
+                [
+                  -0.6014091313057729,
+                  -1.3913522854713396
+                ],
+                [
+                  -0.7483600113106811,
+                  -1.6921832261969059
+                ]
+              ],
+              [
+                [
+                  -0.02737095013863533,
+                  0.9879782884445131
+                ],
+                [
+                  0.859979878916809,
+                  0.8964188113960798
+                ],
+                [
+                  1.1833853162484627,
+                  0.7332188919173136
+                ],
+                [
+                  0.7527660616198588,
+                  0.2920115741695151
+                ],
+                [
+                  -0.10058919048525693,
+                  0.02095828121499203
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "b|0"
+            ]
+          }
+        ]
+      },
+      "diagnostics": [
+        {
+          "series": 0,
+          "variables": [
+            "count",
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 4
+        },
+        {
+          "series": 1,
+          "variables": [
+            "count",
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 4
+        },
+        {
+          "series": 2,
+          "variables": [
+            "count",
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 4
+        },
+        {
+          "series": 0,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 1,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 2,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        }
+      ],
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.2080417860561204,
+          "rmse": 0.2508754648065937,
+          "bias": 0.015353714392046778,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.14844144378973212,
+            "0.9": 0.12474479345726497,
+            "0.99": 0.41243887963711146
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.7207706658519931,
+          "rmse": 0.8788926703956242,
+          "bias": 0.06962818946986202,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.6113780490924672,
+            "0.9": 0.3348329218832422,
+            "0.99": 0.6784572481532063
+          },
+          "negative_predictions": 0
+        }
+      }
+    },
+    {
+      "selection": {
+        "random": [
+          0,
+          5,
+          6
+        ],
+        "medoid": [
+          3,
+          7,
+          6
+        ],
+        "centroid_nearest": [
+          3,
+          7,
+          6
+        ],
+        "pca": [
+          0,
+          2,
+          1
+        ],
+        "coverage": [
+          0,
+          1,
+          2
+        ]
+      },
+      "distinct_selection": {
+        "random": [
+          3,
+          7
+        ],
+        "medoid": [
+          3,
+          7
+        ],
+        "centroid_nearest": [
+          3,
+          7
+        ],
+        "pca": [
+          0,
+          2
+        ],
+        "coverage": [
+          0,
+          1
+        ]
+      },
+      "config": {
+        "method": "dtw",
+        "clustering": "separate",
+        "warping": "independent",
+        "pca_layout": "observations",
+        "group_by_context": true,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      "prediction": [
+        [
+          [
+            2.9878955404477656,
+            9.041512789090264
+          ],
+          [
+            3.5074777671347808,
+            8.774952834296556
+          ],
+          [
+            3.8655863710574283,
+            8.383951776846487
+          ],
+          [
+            4.03676493675117,
+            7.765631357963681
+          ],
+          [
+            3.9181208102541847,
+            7.230458775510612
+          ]
+        ],
+        [
+          [
+            4.046759362925887,
+            10.93982850000265
+          ],
+          [
+            4.744643191973653,
+            10.814428560563666
+          ],
+          [
+            3.9181208102541847,
+            10.365860279139813
+          ],
+          [
+            3.9181208102541847,
+            9.755281023724413
+          ],
+          [
+            3.9181208102541847,
+            9.277777727189374
+          ]
+        ],
+        [
+          [
+            5.064282352543132,
+            13.008078143208488
+          ],
+          [
+            5.793854043122449,
+            12.808653620599245
+          ],
+          [
+            5.9906339636039805,
+            12.337817261619932
+          ],
+          [
+            5.434031229938466,
+            11.778607890804473
+          ],
+          [
+            4.594850330610534,
+            11.294499629243607
+          ]
+        ]
+      ],
+      "summary": {
+        "method": "dtw",
+        "clustering": "separate",
+        "warping": "independent",
+        "coverage_fallback": "training",
+        "window": null,
+        "scaling": "global",
+        "pca_layout": "observations",
+        "training_runs": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "blocks": [
+          {
+            "context": "g0",
+            "variables": [
+              "count"
+            ],
+            "cluster_sizes": [
+              3,
+              3
+            ],
+            "centroids": [
+              [
+                [
+                  -1.8649428499481442
+                ],
+                [
+                  -1.3082018403316897
+                ],
+                [
+                  -0.8134283994261594
+                ],
+                [
+                  -0.6014091313057729
+                ],
+                [
+                  -0.7483600113106811
+                ]
+              ],
+              [
+                [
+                  -0.6325536696067106
+                ],
+                [
+                  0.17440692313201375
+                ],
+                [
+                  0.5566263282970163
+                ],
+                [
+                  0.40459298109072545
+                ],
+                [
+                  -0.26384157111864115
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "b|0"
+            ]
+          },
+          {
+            "context": "g0",
+            "variables": [
+              "speed"
+            ],
+            "cluster_sizes": [
+              3,
+              3
+            ],
+            "centroids": [
+              [
+                [
+                  -0.6873588511076045
+                ],
+                [
+                  -0.8020887091168895
+                ],
+                [
+                  -1.0437823250863592
+                ],
+                [
+                  -1.3913522854713396
+                ],
+                [
+                  -1.6921832261969059
+                ]
+              ],
+              [
+                [
+                  0.4161214273648614
+                ],
+                [
+                  0.34024940498045636
+                ],
+                [
+                  0.07028707743050878
+                ],
+                [
+                  -0.2729314240708057
+                ],
+                [
+                  -0.5413453350334284
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "b|0"
+            ]
+          },
+          {
+            "context": "g1",
+            "variables": [
+              "count"
+            ],
+            "cluster_sizes": [
+              1,
+              2
+            ],
+            "centroids": [
+              [
+                [
+                  0.48239563262632895
+                ],
+                [
+                  1.5023471421234442
+                ],
+                [
+                  1.7931839693955687
+                ],
+                [
+                  1.0443684953506804
+                ],
+                [
+                  0.008335018481271259
+                ]
+              ],
+              [
+                [
+                  0.6255198376809954
+                ],
+                [
+                  1.5671556809906844
+                ],
+                [
+                  1.8186244716020794
+                ],
+                [
+                  1.1292244655481483
+                ],
+                [
+                  0.08982727598155532
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "c|0",
+              "c|0"
+            ]
+          },
+          {
+            "context": "g1",
+            "variables": [
+              "speed"
+            ],
+            "cluster_sizes": [
+              2,
+              1
+            ],
+            "centroids": [
+              [
+                [
+                  1.5497096783056197
+                ],
+                [
+                  1.4424116722311515
+                ],
+                [
+                  1.1787625366752184
+                ],
+                [
+                  0.864420048661608
+                ],
+                [
+                  0.5922933581072674
+                ]
+              ],
+              [
+                [
+                  1.580086091961254
+                ],
+                [
+                  1.472941308972806
+                ],
+                [
+                  1.1679952313751139
+                ],
+                [
+                  0.8420236199062917
+                ],
+                [
+                  0.5651989761757026
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "c|0",
+              "c|0"
+            ]
+          }
+        ]
+      },
+      "diagnostics": [
+        {
+          "series": 0,
+          "variables": [
+            "count"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 0,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "count"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "count"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 0,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 1,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 2,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        }
+      ],
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.29055872715975395,
+          "rmse": 0.4801640677904463,
+          "bias": -0.22836747215595432,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.6714339104187212,
+            "0.9": 0.0472912483083654,
+            "0.99": 0.06635199255027135
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.04724042133415137,
+          "rmse": 0.05264408390531689,
+          "bias": 0.013789687735401223,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.08855379386516837,
+            "0.9": 0.018619617404402433,
+            "0.99": 0.06413184751170142
+          },
+          "negative_predictions": 0
+        }
+      }
+    },
+    {
+      "selection": {
+        "random": [
+          0,
+          5,
+          6
+        ],
+        "medoid": [
+          3,
+          2,
+          6
+        ],
+        "centroid_nearest": [
+          3,
+          2,
+          6
+        ],
+        "pca": [
+          0,
+          2,
+          1
+        ],
+        "coverage": [
+          0,
+          1,
+          2
+        ]
+      },
+      "distinct_selection": {
+        "random": [
+          3,
+          7
+        ],
+        "medoid": [
+          3,
+          2
+        ],
+        "centroid_nearest": [
+          3,
+          2
+        ],
+        "pca": [
+          0,
+          2
+        ],
+        "coverage": [
+          0,
+          1
+        ]
+      },
+      "config": {
+        "method": "dtw",
+        "clustering": "grouped",
+        "warping": "euclidean",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": [
+          [
+            "count"
+          ],
+          [
+            "speed"
+          ]
+        ],
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      "prediction": [
+        [
+          [
+            2.9878955404477656,
+            9.041512789090264
+          ],
+          [
+            3.5074777671347808,
+            8.774952834296556
+          ],
+          [
+            3.8655863710574283,
+            8.866509458149178
+          ],
+          [
+            4.03676493675117,
+            8.558431315009393
+          ],
+          [
+            3.9181208102541847,
+            8.054807937298625
+          ]
+        ],
+        [
+          [
+            4.046759362925887,
+            10.93982850000265
+          ],
+          [
+            4.744643191973653,
+            10.814428560563666
+          ],
+          [
+            5.477759221369737,
+            8.866509458149178
+          ],
+          [
+            5.130088997710735,
+            8.558431315009393
+          ],
+          [
+            4.441113276883174,
+            8.054807937298625
+          ]
+        ],
+        [
+          [
+            5.064282352543132,
+            13.008078143208488
+          ],
+          [
+            5.793854043122449,
+            12.808653620599245
+          ],
+          [
+            5.477759221369737,
+            11.852958751893654
+          ],
+          [
+            5.130088997710735,
+            11.26664035428389
+          ],
+          [
+            4.441113276883174,
+            10.771492078437245
+          ]
+        ]
+      ],
+      "summary": {
+        "method": "dtw",
+        "clustering": "grouped",
+        "warping": "euclidean",
+        "coverage_fallback": "training",
+        "window": null,
+        "scaling": "global",
+        "pca_layout": "series",
+        "training_runs": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "blocks": [
+          {
+            "context": "all",
+            "variables": [
+              "count"
+            ],
+            "cluster_sizes": [
+              3,
+              6
+            ],
+            "centroids": [
+              [
+                [
+                  -1.8649428499481442
+                ],
+                [
+                  -1.3082018403316897
+                ],
+                [
+                  -0.8134283994261594
+                ],
+                [
+                  -0.6014091313057729
+                ],
+                [
+                  -0.7483600113106811
+                ]
+              ],
+              [
+                [
+                  -0.02737095013863533
+                ],
+                [
+                  0.859979878916809
+                ],
+                [
+                  1.1833853162484627
+                ],
+                [
+                  0.7527660616198588
+                ],
+                [
+                  -0.10058919048525693
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "c|0"
+            ]
+          },
+          {
+            "context": "all",
+            "variables": [
+              "speed"
+            ],
+            "cluster_sizes": [
+              5,
+              4
+            ],
+            "centroids": [
+              [
+                [
+                  -0.24756175367882607
+                ],
+                [
+                  -0.34715186527730174
+                ],
+                [
+                  -0.7725272459206265
+                ],
+                [
+                  -0.9457039755522395
+                ],
+                [
+                  -1.2288004933029484
+                ]
+              ],
+              [
+                [
+                  1.2759004864345986
+                ],
+                [
+                  1.1770015168530796
+                ],
+                [
+                  0.9062141170024991
+                ],
+                [
+                  0.5766331165910674
+                ],
+                [
+                  0.2983006188034939
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "c|0"
+            ]
+          }
+        ]
+      },
+      "diagnostics": [
+        {
+          "series": 0,
+          "variables": [
+            "count"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 0,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "count"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "count"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 0,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 1,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 2,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        }
+      ],
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.22254782584275898,
+          "rmse": 0.27555200546017106,
+          "bias": 0.02985975417868536,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.14844144378973212,
+            "0.9": 0.020301306993466994,
+            "0.99": 0.40199453099073157
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.8137216565088322,
+          "rmse": 0.8773970649044828,
+          "bias": -0.3572433252105111,
+          "quantile_errors": {
+            "0.1": 0.3560716936774453,
+            "0.5": 0.8002177717100665,
+            "0.9": 0.5251653485661247,
+            "0.99": 0.5511590793815238
+          },
+          "negative_predictions": 0
+        }
+      }
+    },
+    {
+      "selection": {
+        "random": [
+          0,
+          5,
+          6
+        ],
+        "medoid": [
+          3,
+          1,
+          6
+        ],
+        "centroid_nearest": [
+          3,
+          1,
+          6
+        ],
+        "pca": [
+          0,
+          2,
+          1
+        ],
+        "coverage": [
+          0,
+          1,
+          2
+        ]
+      },
+      "distinct_selection": {
+        "random": [
+          3,
+          7
+        ],
+        "medoid": [
+          3,
+          1
+        ],
+        "centroid_nearest": [
+          3,
+          1
+        ],
+        "pca": [
+          0,
+          2
+        ],
+        "coverage": [
+          0,
+          1
+        ]
+      },
+      "config": {
+        "method": "mean",
+        "clustering": "joint",
+        "warping": "dependent",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      "prediction": [
+        [
+          [
+            2.9878955404477656,
+            9.041512789090264
+          ],
+          [
+            3.5074777671347808,
+            8.774952834296556
+          ],
+          [
+            3.8655863710574283,
+            8.383951776846487
+          ],
+          [
+            4.03676493675117,
+            7.765631357963681
+          ],
+          [
+            3.9181208102541847,
+            7.230458775510612
+          ]
+        ],
+        [
+          [
+            4.046759362925887,
+            10.93982850000265
+          ],
+          [
+            4.744643191973653,
+            10.814428560563666
+          ],
+          [
+            5.477759221369737,
+            11.545203501926375
+          ],
+          [
+            5.130088997710735,
+            10.760303986381915
+          ],
+          [
+            4.441113276883174,
+            10.278105278951712
+          ]
+        ],
+        [
+          [
+            5.064282352543132,
+            13.008078143208488
+          ],
+          [
+            5.793854043122449,
+            12.808653620599245
+          ],
+          [
+            5.477759221369737,
+            11.545203501926375
+          ],
+          [
+            5.130088997710735,
+            10.760303986381915
+          ],
+          [
+            4.441113276883174,
+            10.278105278951712
+          ]
+        ]
+      ],
+      "summary": {
+        "method": "mean",
+        "clustering": "joint",
+        "warping": "dependent",
+        "coverage_fallback": "training",
+        "window": null,
+        "scaling": "global",
+        "pca_layout": "series",
+        "training_runs": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "blocks": [
+          {
+            "context": "all",
+            "variables": [
+              "count",
+              "speed"
+            ],
+            "cluster_sizes": [
+              3,
+              6
+            ],
+            "centroids": [
+              [
+                [
+                  -1.8649428499481442,
+                  -0.6873588511076045
+                ],
+                [
+                  -1.3082018403316897,
+                  -0.8020887091168895
+                ],
+                [
+                  -0.8134283994261594,
+                  -1.0437823250863592
+                ],
+                [
+                  -0.6014091313057729,
+                  -1.3913522854713396
+                ],
+                [
+                  -0.7483600113106811,
+                  -1.6921832261969059
+                ]
+              ],
+              [
+                [
+                  -0.02737095013863533,
+                  0.9879782884445131
+                ],
+                [
+                  0.859979878916809,
+                  0.8964188113960798
+                ],
+                [
+                  1.1833853162484627,
+                  0.7332188919173136
+                ],
+                [
+                  0.7527660616198588,
+                  0.2920115741695151
+                ],
+                [
+                  -0.10058919048525693,
+                  0.02095828121499203
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "b|0"
+            ]
+          }
+        ]
+      },
+      "diagnostics": [
+        {
+          "series": 0,
+          "variables": [
+            "count",
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 4
+        },
+        {
+          "series": 1,
+          "variables": [
+            "count",
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 4
+        },
+        {
+          "series": 2,
+          "variables": [
+            "count",
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 4
+        },
+        {
+          "series": 0,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 1,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 2,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        }
+      ],
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.22254782584275898,
+          "rmse": 0.27555200546017106,
+          "bias": 0.02985975417868536,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.14844144378973212,
+            "0.9": 0.020301306993466994,
+            "0.99": 0.40199453099073157
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.7046412444284648,
+          "rmse": 0.8543363772641135,
+          "bias": 0.05349876804633366,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.6113780490924672,
+            "0.9": 0.36386588044559254,
+            "0.99": 0.8120088575400217
+          },
+          "negative_predictions": 0
+        }
+      }
+    },
+    {
+      "selection": {
+        "random": [
+          0,
+          5,
+          6
+        ],
+        "medoid": [
+          3,
+          7,
+          6
+        ],
+        "centroid_nearest": [
+          3,
+          7,
+          6
+        ],
+        "pca": [
+          0,
+          2,
+          1
+        ],
+        "coverage": [
+          0,
+          1,
+          2
+        ]
+      },
+      "distinct_selection": {
+        "random": [
+          3,
+          7
+        ],
+        "medoid": [
+          3,
+          7
+        ],
+        "centroid_nearest": [
+          3,
+          7
+        ],
+        "pca": [
+          0,
+          2
+        ],
+        "coverage": [
+          0,
+          1
+        ]
+      },
+      "config": {
+        "method": "mean",
+        "clustering": "separate",
+        "warping": "independent",
+        "pca_layout": "observations",
+        "group_by_context": true,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      "prediction": [
+        [
+          [
+            2.9878955404477656,
+            9.041512789090264
+          ],
+          [
+            3.5074777671347808,
+            8.774952834296556
+          ],
+          [
+            3.8655863710574283,
+            8.383951776846487
+          ],
+          [
+            4.03676493675117,
+            7.765631357963681
+          ],
+          [
+            3.9181208102541847,
+            7.230458775510612
+          ]
+        ],
+        [
+          [
+            4.046759362925887,
+            10.93982850000265
+          ],
+          [
+            4.744643191973653,
+            10.814428560563666
+          ],
+          [
+            3.8655863710574283,
+            10.365860279139813
+          ],
+          [
+            4.03676493675117,
+            9.755281023724413
+          ],
+          [
+            3.9181208102541847,
+            9.277777727189374
+          ]
+        ],
+        [
+          [
+            5.064282352543132,
+            13.008078143208488
+          ],
+          [
+            5.793854043122449,
+            12.808653620599245
+          ],
+          [
+            5.9906339636039805,
+            12.337817261619932
+          ],
+          [
+            5.434031229938466,
+            11.778607890804473
+          ],
+          [
+            4.594850330610534,
+            11.294499629243607
+          ]
+        ]
+      ],
+      "summary": {
+        "method": "mean",
+        "clustering": "separate",
+        "warping": "independent",
+        "coverage_fallback": "training",
+        "window": null,
+        "scaling": "global",
+        "pca_layout": "observations",
+        "training_runs": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "blocks": [
+          {
+            "context": "g0",
+            "variables": [
+              "count"
+            ],
+            "cluster_sizes": [
+              3,
+              3
+            ],
+            "centroids": [
+              [
+                [
+                  -1.8649428499481442
+                ],
+                [
+                  -1.3082018403316897
+                ],
+                [
+                  -0.8134283994261594
+                ],
+                [
+                  -0.6014091313057729
+                ],
+                [
+                  -0.7483600113106811
+                ]
+              ],
+              [
+                [
+                  -0.6325536696067106
+                ],
+                [
+                  0.17440692313201375
+                ],
+                [
+                  0.5566263282970163
+                ],
+                [
+                  0.40459298109072545
+                ],
+                [
+                  -0.26384157111864115
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "b|0"
+            ]
+          },
+          {
+            "context": "g0",
+            "variables": [
+              "speed"
+            ],
+            "cluster_sizes": [
+              3,
+              3
+            ],
+            "centroids": [
+              [
+                [
+                  -0.6873588511076045
+                ],
+                [
+                  -0.8020887091168895
+                ],
+                [
+                  -1.0437823250863592
+                ],
+                [
+                  -1.3913522854713396
+                ],
+                [
+                  -1.6921832261969059
+                ]
+              ],
+              [
+                [
+                  0.4161214273648614
+                ],
+                [
+                  0.34024940498045636
+                ],
+                [
+                  0.07028707743050878
+                ],
+                [
+                  -0.2729314240708057
+                ],
+                [
+                  -0.5413453350334284
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "b|0"
+            ]
+          },
+          {
+            "context": "g1",
+            "variables": [
+              "count"
+            ],
+            "cluster_sizes": [
+              1,
+              2
+            ],
+            "centroids": [
+              [
+                [
+                  0.48239563262632895
+                ],
+                [
+                  1.5023471421234442
+                ],
+                [
+                  1.7931839693955687
+                ],
+                [
+                  1.0443684953506804
+                ],
+                [
+                  0.008335018481271259
+                ]
+              ],
+              [
+                [
+                  0.6255198376809954
+                ],
+                [
+                  1.5671556809906844
+                ],
+                [
+                  1.8186244716020794
+                ],
+                [
+                  1.1292244655481483
+                ],
+                [
+                  0.08982727598155532
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "c|0",
+              "c|0"
+            ]
+          },
+          {
+            "context": "g1",
+            "variables": [
+              "speed"
+            ],
+            "cluster_sizes": [
+              2,
+              1
+            ],
+            "centroids": [
+              [
+                [
+                  1.5497096783056197
+                ],
+                [
+                  1.4424116722311515
+                ],
+                [
+                  1.1787625366752184
+                ],
+                [
+                  0.864420048661608
+                ],
+                [
+                  0.5922933581072674
+                ]
+              ],
+              [
+                [
+                  1.580086091961254
+                ],
+                [
+                  1.472941308972806
+                ],
+                [
+                  1.1679952313751139
+                ],
+                [
+                  0.8420236199062917
+                ],
+                [
+                  0.5651989761757026
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "c|0",
+              "c|0"
+            ]
+          }
+        ]
+      },
+      "diagnostics": [
+        {
+          "series": 0,
+          "variables": [
+            "count"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 0,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "count"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "count"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 0,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 1,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 2,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        }
+      ],
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.28321320634861746,
+          "rmse": 0.46984720437132127,
+          "bias": -0.2210219513448178,
+          "quantile_errors": {
+            "0.1": 0.023664705503929184,
+            "0.5": 0.5527897839217362,
+            "0.9": 0.0472912483083654,
+            "0.99": 0.06635199255027135
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.04724042133415137,
+          "rmse": 0.05264408390531689,
+          "bias": 0.013789687735401223,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.08855379386516837,
+            "0.9": 0.018619617404402433,
+            "0.99": 0.06413184751170142
+          },
+          "negative_predictions": 0
+        }
+      }
+    },
+    {
+      "selection": {
+        "random": [
+          0,
+          5,
+          6
+        ],
+        "medoid": [
+          3,
+          2,
+          6
+        ],
+        "centroid_nearest": [
+          3,
+          2,
+          6
+        ],
+        "pca": [
+          0,
+          2,
+          1
+        ],
+        "coverage": [
+          0,
+          1,
+          2
+        ]
+      },
+      "distinct_selection": {
+        "random": [
+          3,
+          7
+        ],
+        "medoid": [
+          3,
+          2
+        ],
+        "centroid_nearest": [
+          3,
+          2
+        ],
+        "pca": [
+          0,
+          2
+        ],
+        "coverage": [
+          0,
+          1
+        ]
+      },
+      "config": {
+        "method": "mean",
+        "clustering": "grouped",
+        "warping": "euclidean",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": [
+          [
+            "count"
+          ],
+          [
+            "speed"
+          ]
+        ],
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      "prediction": [
+        [
+          [
+            2.9878955404477656,
+            9.041512789090264
+          ],
+          [
+            3.5074777671347808,
+            8.774952834296556
+          ],
+          [
+            3.8655863710574283,
+            8.866509458149178
+          ],
+          [
+            4.03676493675117,
+            8.558431315009393
+          ],
+          [
+            3.9181208102541847,
+            8.054807937298625
+          ]
+        ],
+        [
+          [
+            4.046759362925887,
+            10.93982850000265
+          ],
+          [
+            4.744643191973653,
+            10.814428560563666
+          ],
+          [
+            5.477759221369737,
+            8.866509458149178
+          ],
+          [
+            5.130088997710735,
+            8.558431315009393
+          ],
+          [
+            4.441113276883174,
+            8.054807937298625
+          ]
+        ],
+        [
+          [
+            5.064282352543132,
+            13.008078143208488
+          ],
+          [
+            5.793854043122449,
+            12.808653620599245
+          ],
+          [
+            5.477759221369737,
+            11.852958751893654
+          ],
+          [
+            5.130088997710735,
+            11.26664035428389
+          ],
+          [
+            4.441113276883174,
+            10.771492078437245
+          ]
+        ]
+      ],
+      "summary": {
+        "method": "mean",
+        "clustering": "grouped",
+        "warping": "euclidean",
+        "coverage_fallback": "training",
+        "window": null,
+        "scaling": "global",
+        "pca_layout": "series",
+        "training_runs": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "blocks": [
+          {
+            "context": "all",
+            "variables": [
+              "count"
+            ],
+            "cluster_sizes": [
+              3,
+              6
+            ],
+            "centroids": [
+              [
+                [
+                  -1.8649428499481442
+                ],
+                [
+                  -1.3082018403316897
+                ],
+                [
+                  -0.8134283994261594
+                ],
+                [
+                  -0.6014091313057729
+                ],
+                [
+                  -0.7483600113106811
+                ]
+              ],
+              [
+                [
+                  -0.02737095013863533
+                ],
+                [
+                  0.859979878916809
+                ],
+                [
+                  1.1833853162484627
+                ],
+                [
+                  0.7527660616198588
+                ],
+                [
+                  -0.10058919048525693
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "c|0"
+            ]
+          },
+          {
+            "context": "all",
+            "variables": [
+              "speed"
+            ],
+            "cluster_sizes": [
+              5,
+              4
+            ],
+            "centroids": [
+              [
+                [
+                  -0.24756175367882607
+                ],
+                [
+                  -0.34715186527730174
+                ],
+                [
+                  -0.7725272459206265
+                ],
+                [
+                  -0.9457039755522395
+                ],
+                [
+                  -1.2288004933029484
+                ]
+              ],
+              [
+                [
+                  1.2759004864345986
+                ],
+                [
+                  1.1770015168530796
+                ],
+                [
+                  0.9062141170024991
+                ],
+                [
+                  0.5766331165910674
+                ],
+                [
+                  0.2983006188034939
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "c|0"
+            ]
+          }
+        ]
+      },
+      "diagnostics": [
+        {
+          "series": 0,
+          "variables": [
+            "count"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 0,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "count"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "count"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 0,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 1,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 2,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        }
+      ],
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.22254782584275898,
+          "rmse": 0.27555200546017106,
+          "bias": 0.02985975417868536,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.14844144378973212,
+            "0.9": 0.020301306993466994,
+            "0.99": 0.40199453099073157
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.8137216565088322,
+          "rmse": 0.8773970649044828,
+          "bias": -0.3572433252105111,
+          "quantile_errors": {
+            "0.1": 0.3560716936774453,
+            "0.5": 0.8002177717100665,
+            "0.9": 0.5251653485661247,
+            "0.99": 0.5511590793815238
+          },
+          "negative_predictions": 0
+        }
+      }
+    },
+    {
+      "selection": {
+        "random": [
+          0,
+          5,
+          6
+        ],
+        "medoid": [
+          3,
+          1,
+          6
+        ],
+        "centroid_nearest": [
+          3,
+          1,
+          6
+        ],
+        "pca": [
+          0,
+          2,
+          1
+        ],
+        "coverage": [
+          0,
+          1,
+          2
+        ]
+      },
+      "distinct_selection": {
+        "random": [
+          3,
+          7
+        ],
+        "medoid": [
+          3,
+          1
+        ],
+        "centroid_nearest": [
+          3,
+          1
+        ],
+        "pca": [
+          0,
+          2
+        ],
+        "coverage": [
+          0,
+          1
+        ]
+      },
+      "config": {
+        "method": "baseline",
+        "clustering": "joint",
+        "warping": "dependent",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      "prediction": [
+        [
+          [
+            2.9878955404477656,
+            9.041512789090264
+          ],
+          [
+            3.5074777671347808,
+            8.774952834296556
+          ],
+          [
+            3.8655863710574283,
+            8.383951776846487
+          ],
+          [
+            4.03676493675117,
+            7.765631357963681
+          ],
+          [
+            3.9181208102541847,
+            7.230458775510612
+          ]
+        ],
+        [
+          [
+            4.046759362925887,
+            10.93982850000265
+          ],
+          [
+            4.744643191973653,
+            10.814428560563666
+          ],
+          [
+            4.971731134657019,
+            10.365860279139813
+          ],
+          [
+            4.8489835629711555,
+            9.755281023724413
+          ],
+          [
+            4.309307764060425,
+            9.277777727189374
+          ]
+        ],
+        [
+          [
+            5.064282352543132,
+            13.008078143208488
+          ],
+          [
+            5.793854043122449,
+            12.808653620599245
+          ],
+          [
+            5.983787308082454,
+            12.331432317117414
+          ],
+          [
+            5.411194432450315,
+            11.765326949039418
+          ],
+          [
+            4.572918789705923,
+            11.27843283071405
+          ]
+        ]
+      ],
+      "summary": {
+        "method": "baseline",
+        "clustering": "joint",
+        "warping": "dependent",
+        "coverage_fallback": "training",
+        "window": null,
+        "scaling": "global",
+        "pca_layout": "series",
+        "training_runs": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "blocks": [
+          {
+            "context": "all",
+            "variables": [
+              "count",
+              "speed"
+            ],
+            "cluster_sizes": [
+              3,
+              6
+            ],
+            "centroids": [
+              [
+                [
+                  -1.8649428499481442,
+                  -0.6873588511076045
+                ],
+                [
+                  -1.3082018403316897,
+                  -0.8020887091168895
+                ],
+                [
+                  -0.8134283994261594,
+                  -1.0437823250863592
+                ],
+                [
+                  -0.6014091313057729,
+                  -1.3913522854713396
+                ],
+                [
+                  -0.7483600113106811,
+                  -1.6921832261969059
+                ]
+              ],
+              [
+                [
+                  -0.02737095013863533,
+                  0.9879782884445131
+                ],
+                [
+                  0.859979878916809,
+                  0.8964188113960798
+                ],
+                [
+                  1.1833853162484627,
+                  0.7332188919173136
+                ],
+                [
+                  0.7527660616198588,
+                  0.2920115741695151
+                ],
+                [
+                  -0.10058919048525693,
+                  0.02095828121499203
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "b|0"
+            ]
+          }
+        ]
+      },
+      "diagnostics": [
+        {
+          "series": 0,
+          "variables": [
+            "count",
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 4
+        },
+        {
+          "series": 1,
+          "variables": [
+            "count",
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 4
+        },
+        {
+          "series": 2,
+          "variables": [
+            "count",
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 4
+        },
+        {
+          "series": 0,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 1,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 2,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        }
+      ],
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.036290928702076335,
+          "rmse": 0.04789744067153321,
+          "bias": 0.029859754178685458,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.01663593096698257,
+            "0.9": 0.02765247921353886,
+            "0.99": 0.05822612567141494
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.04764031997170864,
+          "rmse": 0.05262809251484659,
+          "bias": 0.009819389424608952,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.08855379386516837,
+            "0.9": 0.030521359716949803,
+            "0.99": 0.07106847179522191
+          },
+          "negative_predictions": 0
+        }
+      }
+    },
+    {
+      "selection": {
+        "random": [
+          0,
+          5,
+          6
+        ],
+        "medoid": [
+          3,
+          7,
+          6
+        ],
+        "centroid_nearest": [
+          3,
+          7,
+          6
+        ],
+        "pca": [
+          0,
+          2,
+          1
+        ],
+        "coverage": [
+          0,
+          1,
+          2
+        ]
+      },
+      "distinct_selection": {
+        "random": [
+          3,
+          7
+        ],
+        "medoid": [
+          3,
+          7
+        ],
+        "centroid_nearest": [
+          3,
+          7
+        ],
+        "pca": [
+          0,
+          2
+        ],
+        "coverage": [
+          0,
+          1
+        ]
+      },
+      "config": {
+        "method": "baseline",
+        "clustering": "separate",
+        "warping": "independent",
+        "pca_layout": "observations",
+        "group_by_context": true,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      "prediction": [
+        [
+          [
+            2.9878955404477656,
+            9.041512789090264
+          ],
+          [
+            3.5074777671347808,
+            8.774952834296556
+          ],
+          [
+            3.8655863710574283,
+            8.383951776846487
+          ],
+          [
+            4.03676493675117,
+            7.765631357963681
+          ],
+          [
+            3.9181208102541847,
+            7.230458775510612
+          ]
+        ],
+        [
+          [
+            4.046759362925887,
+            10.93982850000265
+          ],
+          [
+            4.744643191973653,
+            10.814428560563666
+          ],
+          [
+            4.971731134657019,
+            10.365860279139813
+          ],
+          [
+            4.8489835629711555,
+            9.755281023724413
+          ],
+          [
+            4.309307764060425,
+            9.277777727189374
+          ]
+        ],
+        [
+          [
+            5.064282352543132,
+            13.008078143208488
+          ],
+          [
+            5.793854043122449,
+            12.808653620599245
+          ],
+          [
+            5.983787308082454,
+            12.331432317117414
+          ],
+          [
+            5.411194432450315,
+            11.765326949039418
+          ],
+          [
+            4.572918789705923,
+            11.27843283071405
+          ]
+        ]
+      ],
+      "summary": {
+        "method": "baseline",
+        "clustering": "separate",
+        "warping": "independent",
+        "coverage_fallback": "training",
+        "window": null,
+        "scaling": "global",
+        "pca_layout": "observations",
+        "training_runs": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "blocks": [
+          {
+            "context": "g0",
+            "variables": [
+              "count"
+            ],
+            "cluster_sizes": [
+              3,
+              3
+            ],
+            "centroids": [
+              [
+                [
+                  -1.8649428499481442
+                ],
+                [
+                  -1.3082018403316897
+                ],
+                [
+                  -0.8134283994261594
+                ],
+                [
+                  -0.6014091313057729
+                ],
+                [
+                  -0.7483600113106811
+                ]
+              ],
+              [
+                [
+                  -0.6325536696067106
+                ],
+                [
+                  0.17440692313201375
+                ],
+                [
+                  0.5566263282970163
+                ],
+                [
+                  0.40459298109072545
+                ],
+                [
+                  -0.26384157111864115
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "b|0"
+            ]
+          },
+          {
+            "context": "g0",
+            "variables": [
+              "speed"
+            ],
+            "cluster_sizes": [
+              3,
+              3
+            ],
+            "centroids": [
+              [
+                [
+                  -0.6873588511076045
+                ],
+                [
+                  -0.8020887091168895
+                ],
+                [
+                  -1.0437823250863592
+                ],
+                [
+                  -1.3913522854713396
+                ],
+                [
+                  -1.6921832261969059
+                ]
+              ],
+              [
+                [
+                  0.4161214273648614
+                ],
+                [
+                  0.34024940498045636
+                ],
+                [
+                  0.07028707743050878
+                ],
+                [
+                  -0.2729314240708057
+                ],
+                [
+                  -0.5413453350334284
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "b|0"
+            ]
+          },
+          {
+            "context": "g1",
+            "variables": [
+              "count"
+            ],
+            "cluster_sizes": [
+              1,
+              2
+            ],
+            "centroids": [
+              [
+                [
+                  0.48239563262632895
+                ],
+                [
+                  1.5023471421234442
+                ],
+                [
+                  1.7931839693955687
+                ],
+                [
+                  1.0443684953506804
+                ],
+                [
+                  0.008335018481271259
+                ]
+              ],
+              [
+                [
+                  0.6255198376809954
+                ],
+                [
+                  1.5671556809906844
+                ],
+                [
+                  1.8186244716020794
+                ],
+                [
+                  1.1292244655481483
+                ],
+                [
+                  0.08982727598155532
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "c|0",
+              "c|0"
+            ]
+          },
+          {
+            "context": "g1",
+            "variables": [
+              "speed"
+            ],
+            "cluster_sizes": [
+              2,
+              1
+            ],
+            "centroids": [
+              [
+                [
+                  1.5497096783056197
+                ],
+                [
+                  1.4424116722311515
+                ],
+                [
+                  1.1787625366752184
+                ],
+                [
+                  0.864420048661608
+                ],
+                [
+                  0.5922933581072674
+                ]
+              ],
+              [
+                [
+                  1.580086091961254
+                ],
+                [
+                  1.472941308972806
+                ],
+                [
+                  1.1679952313751139
+                ],
+                [
+                  0.8420236199062917
+                ],
+                [
+                  0.5651989761757026
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "c|0",
+              "c|0"
+            ]
+          }
+        ]
+      },
+      "diagnostics": [
+        {
+          "series": 0,
+          "variables": [
+            "count"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 0,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "count"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "count"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 0,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 1,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 2,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        }
+      ],
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.036290928702076335,
+          "rmse": 0.04789744067153321,
+          "bias": 0.029859754178685458,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.01663593096698257,
+            "0.9": 0.02765247921353886,
+            "0.99": 0.05822612567141494
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.04764031997170864,
+          "rmse": 0.05262809251484659,
+          "bias": 0.009819389424608952,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.08855379386516837,
+            "0.9": 0.030521359716949803,
+            "0.99": 0.07106847179522191
+          },
+          "negative_predictions": 0
+        }
+      }
+    },
+    {
+      "selection": {
+        "random": [
+          0,
+          5,
+          6
+        ],
+        "medoid": [
+          3,
+          2,
+          6
+        ],
+        "centroid_nearest": [
+          3,
+          2,
+          6
+        ],
+        "pca": [
+          0,
+          2,
+          1
+        ],
+        "coverage": [
+          0,
+          1,
+          2
+        ]
+      },
+      "distinct_selection": {
+        "random": [
+          3,
+          7
+        ],
+        "medoid": [
+          3,
+          2
+        ],
+        "centroid_nearest": [
+          3,
+          2
+        ],
+        "pca": [
+          0,
+          2
+        ],
+        "coverage": [
+          0,
+          1
+        ]
+      },
+      "config": {
+        "method": "baseline",
+        "clustering": "grouped",
+        "warping": "euclidean",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": [
+          [
+            "count"
+          ],
+          [
+            "speed"
+          ]
+        ],
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      "prediction": [
+        [
+          [
+            2.9878955404477656,
+            9.041512789090264
+          ],
+          [
+            3.5074777671347808,
+            8.774952834296556
+          ],
+          [
+            3.8655863710574283,
+            8.383951776846487
+          ],
+          [
+            4.03676493675117,
+            7.765631357963681
+          ],
+          [
+            3.9181208102541847,
+            7.230458775510612
+          ]
+        ],
+        [
+          [
+            4.046759362925887,
+            10.93982850000265
+          ],
+          [
+            4.744643191973653,
+            10.814428560563666
+          ],
+          [
+            4.971731134657019,
+            10.365860279139813
+          ],
+          [
+            4.8489835629711555,
+            9.755281023724413
+          ],
+          [
+            4.309307764060425,
+            9.277777727189374
+          ]
+        ],
+        [
+          [
+            5.064282352543132,
+            13.008078143208488
+          ],
+          [
+            5.793854043122449,
+            12.808653620599245
+          ],
+          [
+            5.983787308082454,
+            12.331432317117414
+          ],
+          [
+            5.411194432450315,
+            11.765326949039418
+          ],
+          [
+            4.572918789705923,
+            11.27843283071405
+          ]
+        ]
+      ],
+      "summary": {
+        "method": "baseline",
+        "clustering": "grouped",
+        "warping": "euclidean",
+        "coverage_fallback": "training",
+        "window": null,
+        "scaling": "global",
+        "pca_layout": "series",
+        "training_runs": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "blocks": [
+          {
+            "context": "all",
+            "variables": [
+              "count"
+            ],
+            "cluster_sizes": [
+              3,
+              6
+            ],
+            "centroids": [
+              [
+                [
+                  -1.8649428499481442
+                ],
+                [
+                  -1.3082018403316897
+                ],
+                [
+                  -0.8134283994261594
+                ],
+                [
+                  -0.6014091313057729
+                ],
+                [
+                  -0.7483600113106811
+                ]
+              ],
+              [
+                [
+                  -0.02737095013863533
+                ],
+                [
+                  0.859979878916809
+                ],
+                [
+                  1.1833853162484627
+                ],
+                [
+                  0.7527660616198588
+                ],
+                [
+                  -0.10058919048525693
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "c|0"
+            ]
+          },
+          {
+            "context": "all",
+            "variables": [
+              "speed"
+            ],
+            "cluster_sizes": [
+              5,
+              4
+            ],
+            "centroids": [
+              [
+                [
+                  -0.24756175367882607
+                ],
+                [
+                  -0.34715186527730174
+                ],
+                [
+                  -0.7725272459206265
+                ],
+                [
+                  -0.9457039755522395
+                ],
+                [
+                  -1.2288004933029484
+                ]
+              ],
+              [
+                [
+                  1.2759004864345986
+                ],
+                [
+                  1.1770015168530796
+                ],
+                [
+                  0.9062141170024991
+                ],
+                [
+                  0.5766331165910674
+                ],
+                [
+                  0.2983006188034939
+                ]
+              ]
+            ],
+            "medoid_labels": [
+              "a|0",
+              "c|0"
+            ]
+          }
+        ]
+      },
+      "diagnostics": [
+        {
+          "series": 0,
+          "variables": [
+            "count"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 0,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "count"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 1,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 0,
+          "observations": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "count"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 2,
+          "variables": [
+            "speed"
+          ],
+          "cluster": 1,
+          "observations": 2
+        },
+        {
+          "series": 0,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 1,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        },
+        {
+          "series": 2,
+          "coverage_fallback": "training",
+          "label_values": 0,
+          "context_values": 0,
+          "unsupported": 0
+        }
+      ],
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.036290928702076335,
+          "rmse": 0.04789744067153321,
+          "bias": 0.029859754178685458,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.01663593096698257,
+            "0.9": 0.02765247921353886,
+            "0.99": 0.05822612567141494
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.04764031997170864,
+          "rmse": 0.05262809251484659,
+          "bias": 0.009819389424608952,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.08855379386516837,
+            "0.9": 0.030521359716949803,
+            "0.99": 0.07106847179522191
+          },
+          "negative_predictions": 0
+        }
+      }
+    }
+  ],
+  "masks": {
+    "random-0": [
+      [
+        [
+          false,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      [
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ]
+    ],
+    "random-42": [
+      [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      [
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          true,
+          false
+        ]
+      ]
+    ],
+    "prefix-0": [
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ]
+    ],
+    "prefix-42": [
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ]
+    ],
+    "block-0": [
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          true
+        ]
+      ]
+    ],
+    "block-42": [
+      [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      [
+        [
+          true,
+          true
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          true
+        ]
+      ]
+    ],
+    "representatives-0": [
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ]
+    ],
+    "representatives-42": [
+      [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ]
+    ]
+  },
+  "paired": {
+    "metrics": {
+      "count": {
+        "eligible": 15,
+        "estimated": 15,
+        "coverage": 1.0,
+        "mae": 0.04069673575596899,
+        "rmse": 0.0498621836896113,
+        "bias": 0.004149089765884669,
+        "quantile_errors": {
+          "0.1": 0.021090088535852924,
+          "0.5": 0.01523071032224177,
+          "0.9": 0.005198407767441182,
+          "0.99": 0.05073498477979488
+        },
+        "negative_predictions": 0
+      },
+      "speed": {
+        "eligible": 15,
+        "estimated": 15,
+        "coverage": 1.0,
+        "mae": 0.03914444849087844,
+        "rmse": 0.044675640590375855,
+        "bias": 0.013233771124837012,
+        "quantile_errors": {
+          "0.1": 0.013317385246571334,
+          "0.5": 0.06727575942919906,
+          "0.9": 0.020548224052660657,
+          "0.99": 0.00876137222790696
+        },
+        "negative_predictions": 0
+      }
+    },
+    "prediction": [
+      [
+        [
+          3.0187101506629817,
+          9.017856428300814
+        ],
+        [
+          3.4688689191550433,
+          8.813708396709893
+        ],
+        [
+          3.866913842565132,
+          8.383746714792492
+        ],
+        [
+          4.039239910706172,
+          7.7654787590687375
+        ],
+        [
+          3.919962738086052,
+          7.230300171261354
+        ]
+      ],
+      [
+        [
+          4.012630781967638,
+          10.980928953341785
+        ],
+        [
+          4.664313133833096,
+          10.845959448744573
+        ],
+        [
+          4.972592776278617,
+          10.365681394800001
+        ],
+        [
+          4.849782320629082,
+          9.755090250103377
+        ],
+        [
+          4.31011962257786,
+          9.277613682318965
+        ]
+      ],
+      [
+        [
+          4.990550845176879,
+          13.015631222735369
+        ],
+        [
+          5.7716057833971295,
+          12.824837362276304
+        ],
+        [
+          5.984780088653712,
+          12.331359850940759
+        ],
+        [
+          5.412411002977786,
+          11.765231086366363
+        ],
+        [
+          4.574324010350664,
+          11.278315825296419
+        ]
+      ]
+    ],
+    "summary": {
+      "method": "paired_residual",
+      "ridge": 1.0,
+      "nonnegative": true,
+      "engine_jar_sha256": "engine-hash",
+      "input_clock": {
+        "tickDuration": 1.0,
+        "startTick": 0,
+        "endTick": 5
+      },
+      "departure_tolerance_seconds": 1.0,
+      "departure_envelope": {
+        "v0": [
+          10.0,
+          12.0
+        ],
+        "v1": [
+          20.0,
+          20.0
+        ],
+        "v2": [
+          30.0,
+          30.0
+        ]
+      },
+      "calibration_source_sha256": null,
+      "training_runs": [
+        "r0",
+        "r1",
+        "r2"
+      ],
+      "reduction_context": {
+        "schema": "simedape.reduction_context.v1",
+        "policy": "vehicle_sample",
+        "selected_units": [
+          "v0"
+        ],
+        "selected_series": [
+          "a|0"
+        ],
+        "simulated_links": [
+          "a"
+        ],
+        "background_links": [],
+        "observation_semantics": "reduced_proxy",
+        "clock": {
+          "tickDuration": 1.0
+        },
+        "sha256": "54a2c0863f110db843b8dae38b7b25a64e2c8293eff96c11f753b82bfbaeafa5"
+      },
+      "mappings": [
+        {
+          "group": "g0",
+          "label": "a|0",
+          "gain": [
+            0.023588761619822703,
+            0.0018321682033300773
+          ],
+          "paired_values": [
+            15,
+            15
+          ],
+          "paired_runs": [
+            3,
+            3
+          ]
+        },
+        {
+          "group": "g0",
+          "label": "b|0",
+          "gain": [
+            0.008864907289634379,
+            0.0014087393531841308
+          ],
+          "paired_values": [
+            15,
+            14
+          ],
+          "paired_runs": [
+            3,
+            3
+          ]
+        },
+        {
+          "group": "g1",
+          "label": "c|0",
+          "gain": [
+            0.013175462133371538,
+            0.0010386360793255152
+          ],
+          "paired_values": [
+            15,
+            15
+          ],
+          "paired_runs": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    "diagnostics": [
+      {
+        "label": "a|0",
+        "proxy_updates": 10,
+        "context_fallback": 0,
+        "unsupported": 0,
+        "clipped": 0,
+        "gain": [
+          0.023588761619822703,
+          0.0018321682033300773
+        ],
+        "input_semantics": "reduced_proxy",
+        "input_assessment": {
+          "decision": "within_calibration_envelope",
+          "reasons": [],
+          "outside_vehicle_count": 0,
+          "outside_vehicle_examples": [],
+          "max_departure_excess_seconds": 0.0,
+          "scope": "Input compatibility only; empirical accuracy and joint departure distributions need validation"
+        },
+        "departure_extrapolation_ablation": false
+      },
+      {
+        "label": "b|0",
+        "proxy_updates": 10,
+        "context_fallback": 0,
+        "unsupported": 0,
+        "clipped": 0,
+        "gain": [
+          0.008864907289634379,
+          0.0014087393531841308
+        ],
+        "input_semantics": "reduced_proxy",
+        "input_assessment": {
+          "decision": "within_calibration_envelope",
+          "reasons": [],
+          "outside_vehicle_count": 0,
+          "outside_vehicle_examples": [],
+          "max_departure_excess_seconds": 0.0,
+          "scope": "Input compatibility only; empirical accuracy and joint departure distributions need validation"
+        },
+        "departure_extrapolation_ablation": false
+      },
+      {
+        "label": "c|0",
+        "proxy_updates": 10,
+        "context_fallback": 0,
+        "unsupported": 0,
+        "clipped": 0,
+        "gain": [
+          0.013175462133371538,
+          0.0010386360793255152
+        ],
+        "input_semantics": "reduced_proxy",
+        "input_assessment": {
+          "decision": "within_calibration_envelope",
+          "reasons": [],
+          "outside_vehicle_count": 0,
+          "outside_vehicle_examples": [],
+          "max_departure_excess_seconds": 0.0,
+          "scope": "Input compatibility only; empirical accuracy and joint departure distributions need validation"
+        },
+        "departure_extrapolation_ablation": false
+      }
+    ],
+    "assessment": {
+      "decision": "requires_full_run",
+      "reasons": [
+        "departure_outside_envelope"
+      ],
+      "outside_vehicle_count": 1,
+      "outside_vehicle_examples": [
+        "v0"
+      ],
+      "max_departure_excess_seconds": 87.0,
+      "scope": "Input compatibility only; empirical accuracy and joint departure distributions need validation"
+    }
+  },
+  "basis": {
+    "matrix": [
+      [
+        1.0,
+        null,
+        2.0,
+        5.0
+      ],
+      [
+        2.0,
+        4.0,
+        null,
+        6.0
+      ],
+      [
+        3.0,
+        6.0,
+        6.0,
+        7.0
+      ],
+      [
+        4.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    ],
+    "row": [
+      2.5,
+      null,
+      null,
+      6.5
+    ],
+    "expected": [
+      2.5,
+      6.0,
+      5.333333333333333,
+      6.5
+    ],
+    "diagnostics": {
+      "observations": 2,
+      "rank": 1,
+      "condition": null,
+      "components": 2
+    }
+  }
+}

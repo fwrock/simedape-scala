@@ -1,0 +1,13 @@
+run_id,vehicle_id,link_id,time_seconds,event_type,sample_duration_seconds,speed,acceleration,position,gap,leader_id
+r0,1152921504606846977,a,0,enter,,,,,,
+r0,1152921504606846977,a,6,exit,,,,,,
+r0,1152921504606846977,a,2,sample,2.0,0.0,-1.0,0.0,5.0,-1
+r0,1152921504606846977,a,4,sample,2.0,2.0,0.5,10.0,4.0,leader
+r0,1152921504606846977,a,6,sample,2.0,4.0,1.0,20.0,3.0,leader
+r0,1152921504606846977,a,4,lane_change,,,,,,
+r0,v2,b,1,enter,,,,,,
+r0,v2,b,7,exit,,,,,,
+r0,v2,b,3,sample,2.0,0.0,-1.0,0.0,5.0,-1
+r0,v2,b,5,sample,2.0,2.0,0.5,10.0,4.0,leader
+r0,v2,b,7,sample,2.0,4.0,1.0,20.0,3.0,leader
+r0,v2,b,5,lane_change,,,,,,

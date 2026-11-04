@@ -1,0 +1,1081 @@
+{
+  "baseline": "simedape@28f1e56",
+  "routes": [
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/health",
+      "methods": [
+        "GET"
+      ],
+      "handler": "health",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/simulations",
+      "methods": [
+        "GET"
+      ],
+      "handler": "list_clickhouse_simulations",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/stages",
+      "methods": [
+        "GET"
+      ],
+      "handler": "list_stages",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/configs",
+      "methods": [
+        "GET"
+      ],
+      "handler": "list_configs",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/configs",
+      "methods": [
+        "POST"
+      ],
+      "handler": "create_config",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/configs/<name>",
+      "methods": [
+        "GET"
+      ],
+      "handler": "get_config",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/configs/<name>",
+      "methods": [
+        "PUT"
+      ],
+      "handler": "update_config",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/configs/<name>",
+      "methods": [
+        "DELETE"
+      ],
+      "handler": "delete_config",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs",
+      "methods": [
+        "POST"
+      ],
+      "handler": "create_run",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs",
+      "methods": [
+        "GET"
+      ],
+      "handler": "list_runs",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>",
+      "methods": [
+        "GET"
+      ],
+      "handler": "get_run",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "handler": "cancel_run",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/progress",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_progress",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/artifacts",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_artifacts",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/model",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_model",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/clustering-report",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_clustering_report",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/estimation-variants",
+      "methods": [
+        "GET"
+      ],
+      "handler": "estimation_variants",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/model/download",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_model_download",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/estimation",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_estimation",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/comparison",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_comparison",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/charts",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_charts",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/charts/<chart_id>",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_chart",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/sweep",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_sweep",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/report.pdf",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_report_pdf",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/latex",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_latex",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/export.zip",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_article_package",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/reports",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_reports",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "app",
+      "blueprint": "api",
+      "path": "/runs/<run_id>/reports/<name>",
+      "methods": [
+        "GET"
+      ],
+      "handler": "run_report_file",
+      "status": "native_implemented",
+      "verification": "NativePipelineApiSpec; ApiContractsParitySpec"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/status",
+      "methods": [
+        "GET"
+      ],
+      "handler": "status",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/schema",
+      "methods": [
+        "GET"
+      ],
+      "handler": "schema",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/examples",
+      "methods": [
+        "GET"
+      ],
+      "handler": "examples",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/templates",
+      "methods": [
+        "GET"
+      ],
+      "handler": "templates",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/templates/<template_id>/render",
+      "methods": [
+        "POST"
+      ],
+      "handler": "render_template",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/validate",
+      "methods": [
+        "POST"
+      ],
+      "handler": "validate",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/runs",
+      "methods": [
+        "POST"
+      ],
+      "handler": "start_run",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/runs",
+      "methods": [
+        "GET"
+      ],
+      "handler": "list_runs",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/runs/<run_id>",
+      "methods": [
+        "GET"
+      ],
+      "handler": "get_run",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/runs/<run_id>/logs",
+      "methods": [
+        "GET"
+      ],
+      "handler": "list_logs",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/runs/<run_id>/logs/<name>",
+      "methods": [
+        "GET"
+      ],
+      "handler": "get_log",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/runs/<run_id>/cancel",
+      "methods": [
+        "POST"
+      ],
+      "handler": "cancel_run",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/runs/<run_id>/interrupt",
+      "methods": [
+        "POST"
+      ],
+      "handler": "interrupt_run",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/runs/<run_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "handler": "delete_run",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/runs/<run_id>/artifact",
+      "methods": [
+        "GET"
+      ],
+      "handler": "artifact",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/descriptors",
+      "methods": [
+        "GET"
+      ],
+      "handler": "list_descriptors",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/descriptors/<name>",
+      "methods": [
+        "GET"
+      ],
+      "handler": "get_descriptor",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/descriptors/<name>",
+      "methods": [
+        "PUT"
+      ],
+      "handler": "put_descriptor",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "experiments",
+      "blueprint": "experiments_api",
+      "path": "/descriptors/<name>",
+      "methods": [
+        "DELETE"
+      ],
+      "handler": "delete_descriptor",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/locations",
+      "methods": [
+        "GET"
+      ],
+      "handler": "list_locations",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/locations",
+      "methods": [
+        "POST"
+      ],
+      "handler": "add_location",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/locations/<location_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "handler": "remove_location",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/locations/<location_id>/test",
+      "methods": [
+        "GET"
+      ],
+      "handler": "test_location",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/locations/<location_id>/simulations",
+      "methods": [
+        "GET"
+      ],
+      "handler": "location_simulations",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/locations/<location_id>/scenarios",
+      "methods": [
+        "GET"
+      ],
+      "handler": "location_scenarios",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/fs/browse",
+      "methods": [
+        "GET"
+      ],
+      "handler": "browse",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/locations/suggestions",
+      "methods": [
+        "GET"
+      ],
+      "handler": "suggestions",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/engines",
+      "methods": [
+        "GET"
+      ],
+      "handler": "list_engines",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/engines",
+      "methods": [
+        "POST"
+      ],
+      "handler": "add_engine",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/engines/<engine_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "handler": "remove_engine",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/engines/<engine_id>/test",
+      "methods": [
+        "GET"
+      ],
+      "handler": "test_engine_route",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/scenarios",
+      "methods": [
+        "GET"
+      ],
+      "handler": "all_scenarios",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/scenarios/engine-path",
+      "methods": [
+        "GET"
+      ],
+      "handler": "engine_path",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/scenarios/partial-config",
+      "methods": [
+        "POST"
+      ],
+      "handler": "partial_config",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/partial/report",
+      "methods": [
+        "GET"
+      ],
+      "handler": "partial_report",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/scenarios/config",
+      "methods": [
+        "GET"
+      ],
+      "handler": "scenario_config",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/scenarios/config",
+      "methods": [
+        "PUT"
+      ],
+      "handler": "save_scenario_config",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/scenarios/engine-config",
+      "methods": [
+        "POST"
+      ],
+      "handler": "scenario_engine_config",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/engine-settings",
+      "methods": [
+        "GET"
+      ],
+      "handler": "engine_settings",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/engine-settings/export",
+      "methods": [
+        "POST"
+      ],
+      "handler": "export_engine_settings",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "locations",
+      "blueprint": "locations_api",
+      "path": "/engine-settings/profile",
+      "methods": [
+        "GET",
+        "PUT"
+      ],
+      "handler": "engine_startup_profile",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "modifications",
+      "blueprint": "modifications_api",
+      "path": "/schemas",
+      "methods": [
+        "GET"
+      ],
+      "handler": "actor_schemas",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "modifications",
+      "blueprint": "modifications_api",
+      "path": "/modifications/actor",
+      "methods": [
+        "GET"
+      ],
+      "handler": "read_actor",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "modifications",
+      "blueprint": "modifications_api",
+      "path": "/modifications",
+      "methods": [
+        "GET"
+      ],
+      "handler": "list_files",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "modifications",
+      "blueprint": "modifications_api",
+      "path": "/modifications/file",
+      "methods": [
+        "GET"
+      ],
+      "handler": "read_file",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "modifications",
+      "blueprint": "modifications_api",
+      "path": "/modifications/file",
+      "methods": [
+        "PUT"
+      ],
+      "handler": "write_file",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "modifications",
+      "blueprint": "modifications_api",
+      "path": "/modifications/validate",
+      "methods": [
+        "POST"
+      ],
+      "handler": "validate_content",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "native",
+      "blueprint": "native_api",
+      "path": "/htc/scenarios",
+      "methods": [
+        "GET"
+      ],
+      "handler": "scenarios",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "native",
+      "blueprint": "native_api",
+      "path": "/htc/runs",
+      "methods": [
+        "POST"
+      ],
+      "handler": "start_native",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "native",
+      "blueprint": "native_api",
+      "path": "/runs/<run_id>/native/live",
+      "methods": [
+        "GET"
+      ],
+      "handler": "live_descriptor",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "native",
+      "blueprint": "native_api",
+      "path": "/runs/<run_id>/native/live/geometry",
+      "methods": [
+        "GET"
+      ],
+      "handler": "live_geometry",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "native",
+      "blueprint": "native_api",
+      "path": "/runs/<run_id>/native/live/ready",
+      "methods": [
+        "POST"
+      ],
+      "handler": "viewer_ready",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "native",
+      "blueprint": "native_api",
+      "path": "/runs/<run_id>/native/series",
+      "methods": [
+        "GET"
+      ],
+      "handler": "measured_series",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "native",
+      "blueprint": "native_api",
+      "path": "/runs/<run_id>/native/artifacts/<filename>",
+      "methods": [
+        "GET"
+      ],
+      "handler": "native_artifact",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "native",
+      "blueprint": "native_api",
+      "path": "/runs/<run_id>/native/replay",
+      "methods": [
+        "GET"
+      ],
+      "handler": "native_replay",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "native",
+      "blueprint": "native_api",
+      "path": "/runs/<run_id>/native/replay/files/<filename>",
+      "methods": [
+        "GET"
+      ],
+      "handler": "native_replay",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "osm_import",
+      "blueprint": "osm_import_api",
+      "path": "/sources",
+      "methods": [
+        "GET"
+      ],
+      "handler": "sources",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "osm_import",
+      "blueprint": "osm_import_api",
+      "path": "/preview",
+      "methods": [
+        "POST"
+      ],
+      "handler": "start_preview",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "osm_import",
+      "blueprint": "osm_import_api",
+      "path": "/publish",
+      "methods": [
+        "POST"
+      ],
+      "handler": "start_publish",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "scenario_editor",
+      "blueprint": "scenario_editor_api",
+      "path": "/drafts",
+      "methods": [
+        "GET"
+      ],
+      "handler": "list_drafts",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "scenario_editor",
+      "blueprint": "scenario_editor_api",
+      "path": "/drafts",
+      "methods": [
+        "POST"
+      ],
+      "handler": "create",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "scenario_editor",
+      "blueprint": "scenario_editor_api",
+      "path": "/drafts/<identity>",
+      "methods": [
+        "GET"
+      ],
+      "handler": "get_draft",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "scenario_editor",
+      "blueprint": "scenario_editor_api",
+      "path": "/drafts/<identity>",
+      "methods": [
+        "PUT"
+      ],
+      "handler": "save",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "scenario_editor",
+      "blueprint": "scenario_editor_api",
+      "path": "/drafts/<identity>/validate",
+      "methods": [
+        "POST"
+      ],
+      "handler": "validate",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "scenario_editor",
+      "blueprint": "scenario_editor_api",
+      "path": "/drafts/<identity>/route",
+      "methods": [
+        "POST"
+      ],
+      "handler": "find_route",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    },
+    {
+      "module": "scenario_editor",
+      "blueprint": "scenario_editor_api",
+      "path": "/drafts/<identity>/publish",
+      "methods": [
+        "POST"
+      ],
+      "handler": "publish",
+      "status": "external_service_integration",
+      "verification": "PlatformApiSpec (isolated mock; not platform business-logic acceptance)"
+    }
+  ],
+  "stages": {
+    "data_load": "native_implemented",
+    "process_dataset": "native_implemented",
+    "clustering": "native_implemented",
+    "simulation_points": "native_implemented",
+    "warping_paths": "native_implemented",
+    "scenario_metrics": "native_implemented",
+    "estimation": "native_implemented",
+    "compare": "native_implemented",
+    "pca_train": "native_implemented",
+    "pca_estimation": "native_implemented",
+    "sweep": "native_implemented",
+    "selective_instantiation": "native_implemented",
+    "selection": "native_implemented",
+    "multivariable_experiment": "native_implemented",
+    "model_export": "native_implemented",
+    "estimation_variants": "native_implemented"
+  },
+  "variants": {
+    "expected": 100,
+    "status": "native_implemented",
+    "verification": "ModelVariantParitySpec: Python-produced outputs for all 100 variants"
+  },
+  "metrics": [
+    "average_speed",
+    "percentage_of_track",
+    "average_vehicles",
+    "km_traveled",
+    "density_veh_km",
+    "speed_index",
+    "delay_index",
+    "peak_occupancy",
+    "congested_time_pct"
+  ],
+  "platform_backend": "SIMEDAPE_PLATFORM_API_URL (optional; required for external control routes)",
+  "limits": [
+    "No real-city performance or accuracy campaign run.",
+    "HTC platform business logic remains in existing services; forwarding is not a native port.",
+    "Python pickle/joblib is not a JVM model format; use portable exports.",
+    "Legacy /api/v1 retains historical input semantics."
+  ]
+}

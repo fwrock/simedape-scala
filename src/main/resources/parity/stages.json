@@ -1,0 +1,145 @@
+[
+  {
+    "name": "data_load",
+    "description": "Carrega o cenário (CSV ou ClickHouse) e as informações das vias.",
+    "parameters": []
+  },
+  {
+    "name": "process_dataset",
+    "description": "Normaliza e reamostrada as séries temporais.",
+    "parameters": []
+  },
+  {
+    "name": "clustering",
+    "description": "Executa K-Shape clustering e salva o resultado.",
+    "parameters": []
+  },
+  {
+    "name": "simulation_points",
+    "description": "Identifica os pontos de simulação (série mais próxima ao centróide de cada cluster)",
+    "parameters": []
+  },
+  {
+    "name": "warping_paths",
+    "description": "Calcula os DTW warping paths entre o centróide de cada cluster e todas",
+    "parameters": [
+      "n_jobs",
+      "load_from_disk"
+    ]
+  },
+  {
+    "name": "scenario_metrics",
+    "description": "Calcula as métricas de tráfego (velocidade, ocupação, veículos, km)",
+    "parameters": [
+      "output_file",
+      "reference_dir"
+    ]
+  },
+  {
+    "name": "estimation",
+    "description": "Executa um ou mais métodos de estimação e salva os resultados.",
+    "parameters": [
+      "methods",
+      "second_scenario_dir",
+      "percentage_sample",
+      "output_prefix"
+    ]
+  },
+  {
+    "name": "compare",
+    "description": "Compara métricas estimadas com o cenário real (100%) e gera relatórios.",
+    "parameters": [
+      "real_file",
+      "estimated_files",
+      "output_prefix",
+      "generate_plots"
+    ]
+  },
+  {
+    "name": "pca_train",
+    "description": "Treina modelos K-Shape + PCA por cluster usando o dataset completo (100%).",
+    "parameters": [
+      "n_components",
+      "models_file",
+      "load_from_disk"
+    ]
+  },
+  {
+    "name": "pca_estimation",
+    "description": "Estima métricas a partir de um cenário parcial usando modelos PCA treinados.",
+    "parameters": [
+      "second_scenario_dir",
+      "models_file",
+      "output_file",
+      "mode",
+      "use_sp"
+    ]
+  },
+  {
+    "name": "sweep",
+    "description": "Executa estimação e comparação para múltiplos cenários parciais.",
+    "parameters": [
+      "real_file",
+      "scenarios",
+      "methods",
+      "include_pca",
+      "pca_use_sp",
+      "variants",
+      "output_prefix",
+      "generate_plots"
+    ]
+  },
+  {
+    "name": "selective_instantiation",
+    "description": "Generates the selective configuration for the partial simulation.",
+    "parameters": [
+      "output_file",
+      "include_buffer_ratio"
+    ]
+  },
+  {
+    "name": "selection",
+    "description": "Seleciona a fração do cenário que vai para a simulação parcial.",
+    "parameters": [
+      "strategy",
+      "percentage",
+      "seed",
+      "unit_map_file",
+      "unit_kind",
+      "topology_file",
+      "force_links",
+      "mode_policy",
+      "decisions_file",
+      "fill_to_target",
+      "output_file"
+    ]
+  },
+  {
+    "name": "multivariable_experiment",
+    "description": "Execute held-out microscopic/multivariable experiments from an explicit experiment config.",
+    "parameters": [
+      "experiment_config",
+      "base_dir"
+    ]
+  },
+  {
+    "name": "model_export",
+    "description": "Empacota o modelo treinado em ``model.simedape``.",
+    "parameters": [
+      "output_file",
+      "keep_parts",
+      "include_vehicles"
+    ]
+  },
+  {
+    "name": "estimation_variants",
+    "description": "Parâmetros",
+    "parameters": [
+      "variants",
+      "second_scenario_dir",
+      "percentage_sample",
+      "output_prefix",
+      "workers"
+    ]
+  }
+]

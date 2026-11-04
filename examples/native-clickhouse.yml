@@ -1,0 +1,38 @@
+config:
+  scenario_name: occupancy-model
+  data_source: clickhouse
+  street_info_file: input/street_info.csv
+  output_dir: output/occupancy-model
+  compact_model: true
+  model_precision: float64
+  intervals:
+    start_time: 0
+    end_time: 86400
+    interval_size: 3600
+    sample_period: 60
+  clickhouse:
+    simulation_id: full-training-run
+    table: vehicle_link_events
+  clustering:
+    n_clusters: 36
+    max_iter: 8
+    random_state: 10
+    clustering_size: 60
+stages:
+  - data_load
+  - process_dataset
+  - clustering
+  - simulation_points
+  - name: pca_train
+    params:
+      n_components: 5
+  - name: warping_paths
+    params:
+      n_jobs: 4
+  - scenario_metrics
+  - name: selection
+    params:
+      strategy: cluster_weighted
+      percentage: 10
+      seed: 42
+  - model_export

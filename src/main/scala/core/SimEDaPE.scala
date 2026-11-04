@@ -39,7 +39,10 @@ object AppGuardian:
       import api.{StartPipelineRequest}
 
       val gateway = ctx.spawn(PipelineApiGateway(config), "api-gateway")
-      val route   = Routes(gateway)(using ctx.system)
+      val nativeApi = new org.interscity.htc.parity.Api(java.nio.file.Path.of(sys.env.getOrElse("SIMEDAPE_STATE_DIR", "state")))(using ctx.system)
+      import org.apache.pekko.http.scaladsl.server.Directives.concat
+      val route = concat(Routes(gateway)(using ctx.system), nativeApi.route)
+      ctx.system.whenTerminated.onComplete(_ => nativeApi.close())(ctx.executionContext)
       HttpServer.bind(route, config.http)(using ctx.system)
 
       if config.http.autoStart then

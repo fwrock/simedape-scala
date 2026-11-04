@@ -1,0 +1,1491 @@
+{
+  "schema": "simedape.experiment.v1",
+  "config": {
+    "dataset": "experiment-dataset.npz",
+    "training_runs": [
+      "r0",
+      "r1",
+      "r2"
+    ],
+    "test_runs": [
+      "r3"
+    ],
+    "fractions": [
+      0.4
+    ],
+    "seeds": [
+      42
+    ],
+    "mask": "prefix",
+    "models": [
+      {
+        "name": "model-0",
+        "method": "pca",
+        "clustering": "joint",
+        "warping": "dependent",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      {
+        "name": "model-1",
+        "method": "pca",
+        "clustering": "separate",
+        "warping": "independent",
+        "pca_layout": "observations",
+        "group_by_context": true,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      {
+        "name": "model-2",
+        "method": "pca",
+        "clustering": "grouped",
+        "warping": "euclidean",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": [
+          [
+            "count"
+          ],
+          [
+            "speed"
+          ]
+        ],
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      {
+        "name": "model-3",
+        "method": "dtw",
+        "clustering": "joint",
+        "warping": "dependent",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      {
+        "name": "model-4",
+        "method": "dtw",
+        "clustering": "separate",
+        "warping": "independent",
+        "pca_layout": "observations",
+        "group_by_context": true,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      {
+        "name": "model-5",
+        "method": "dtw",
+        "clustering": "grouped",
+        "warping": "euclidean",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": [
+          [
+            "count"
+          ],
+          [
+            "speed"
+          ]
+        ],
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      {
+        "name": "model-6",
+        "method": "mean",
+        "clustering": "joint",
+        "warping": "dependent",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      {
+        "name": "model-7",
+        "method": "mean",
+        "clustering": "separate",
+        "warping": "independent",
+        "pca_layout": "observations",
+        "group_by_context": true,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      {
+        "name": "model-8",
+        "method": "mean",
+        "clustering": "grouped",
+        "warping": "euclidean",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": [
+          [
+            "count"
+          ],
+          [
+            "speed"
+          ]
+        ],
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      {
+        "name": "model-9",
+        "method": "baseline",
+        "clustering": "joint",
+        "warping": "dependent",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      {
+        "name": "model-10",
+        "method": "baseline",
+        "clustering": "separate",
+        "warping": "independent",
+        "pca_layout": "observations",
+        "group_by_context": true,
+        "variable_groups": null,
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      },
+      {
+        "name": "model-11",
+        "method": "baseline",
+        "clustering": "grouped",
+        "warping": "euclidean",
+        "pca_layout": "series",
+        "group_by_context": false,
+        "variable_groups": [
+          [
+            "count"
+          ],
+          [
+            "speed"
+          ]
+        ],
+        "n_clusters": 2,
+        "n_components": 2,
+        "seed": 42
+      }
+    ]
+  },
+  "source_sha256": "17fae42d28c1732479d6eb825bd0e1ebd52bd1803a65988af139f5899cf06e9f",
+  "implementation_files": {
+    "__init__.py": "545323ead61be171b73f0b2cf2204558a3e2bf486789a845a0bd8acc73a6fcbb",
+    "benchmark.py": "a03767c659f5ee39866a71a8e998d4c62fca8ad46864afeae9dda63e861f2095",
+    "benchmark_report.py": "56329d70c1b07518cbf34f5ae8276e0ce32ead8a5043a41d6f5c6315ac2a31c4",
+    "cli.py": "07eb34cdaafa427b2f75be2c78401caa893adbd7f8b117c81e55d0a337fa839b",
+    "data.py": "ed7fe612b72b02efe6af22ce921061fae127c8f84d1ca581e8ac7ccd45d0d7b2",
+    "evaluation.py": "320a8fa77d869170bad24934f4636c79a91fac8ea5b351c51c3e6600695a3466",
+    "guarded.py": "260677aa4b19f54b7e14f14d1b046fe5d1fad7cd19eec89c2e650ccc829a1715",
+    "htc.py": "d389f3efc56d6b577e7750651a9b744472ad52f11f30ebd0f69fd22a3b77a907",
+    "htc_validation.py": "04ba72257a56c6306b2dfe4fcd72074ddf87710bf6df9e23b846602ef6249914",
+    "intervention_report.py": "a6ee850aaa87e872e10d804dacc135deafbe69a4bf2dc7de8256ffecffab03be",
+    "intervention_study.py": "cc3376504e96fc90fa7ab556a745d35eeaf4eef4c0fc2d55a5ba4b4093439002",
+    "materialize.py": "79f6305d2b75bc293909ed3d83f701c4fe9815e03f29784c28f0bd2535720ba7",
+    "measurement.py": "16235c376025fc154b92007d076c721ad54a78be5f7e2d92b1402a8a2d941548",
+    "model.py": "585ea05164058efed6730d4e552fc85b232893d10549fea50f3301d63560640a",
+    "observation.py": "0376935192d0791f51c1bae7a1959c4961b2a69ffd870bd40e0e5b7e6c39f68a",
+    "paired.py": "fde71b080bcda17cc31fcc3e81ef6c5f04d6a853e2a180e8745aba1352be132d",
+    "reconstruction_report.py": "878bb67bdad7baae6ce2db6c2a969dbda269800ebb9f17c01d0c7809a5e7d1d3",
+    "reconstruction_study.py": "9306ba2649b43993e0d0706cfcb50330c5faef30578bb884d114f2818255ede0",
+    "reduction.py": "dca10859157ea1a36a8dbf3506a5f165c3214ca7f45a4f2c231a878c88e72181",
+    "representative_preparation.py": "02ef61e6c8356376c5aede346b47d92e833bea5136edccab194895f609b45ec9",
+    "representative_report.py": "4a5651417c721418de62b359806aec8d3ca52bdc3a9e3b8959b9ed504400409d",
+    "representative_screen.py": "1c7ce40e4763ef1deebb8abb15c17887340502289107b06820ff83bf076a7d87",
+    "representative_study.py": "4db072715b23282d48a87c2e551a876018417ebeec412292fe6caaf375526f69",
+    "road_network.py": "a3981d78b2196ad0195eee81bd56e6aa3bd0159e7db45043f0e0a35e4af928c5",
+    "runner.py": "ae5921674a1cbf01e1df47b2863ee5f90ad4eafe1b5a605916b834ace6f84da8"
+  },
+  "training_runs": [
+    "r0",
+    "r1",
+    "r2"
+  ],
+  "test_runs": [
+    "r3"
+  ],
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "3.1.0"
+  },
+  "wall_seconds": 1.974652048003918,
+  "python_traced_peak_bytes": 461196,
+  "memory_scope": "Python allocations during model experiments; not total RSS or simulator memory",
+  "results": [
+    {
+      "id": "case-0000",
+      "name": "model-0",
+      "seed": 42,
+      "fraction": 0.4,
+      "experiment": "masked",
+      "selection": "medoid",
+      "representative_budget": 2,
+      "selection_applied": false,
+      "input_semantics": "full",
+      "uncalibrated_proxy_ablation": false,
+      "model_artifact": "fit-42-0/model.joblib",
+      "selected_labels": [
+        "a|0",
+        "b|0"
+      ],
+      "observed_values": 12,
+      "reference_values": 30,
+      "fit_seconds": 0.1325063640033477,
+      "prediction_seconds": 0.019931914001062978,
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.05694315340843121,
+          "rmse": 0.08371669133483071,
+          "bias": 0.0433263114749802,
+          "quantile_errors": {
+            "0.1": 0.00018509261358756746,
+            "0.5": 0.01197626886997849,
+            "0.9": 0.02717326512357321,
+            "0.99": 0.07517566457954228
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.2197680558212237,
+          "rmse": 0.4152559276386717,
+          "bias": 0.13439038132167733,
+          "quantile_errors": {
+            "0.1": 0.06541465256244194,
+            "0.5": 0.14452757960474827,
+            "0.9": 0.05386847100374759,
+            "0.99": 0.33497041623945023
+          },
+          "negative_predictions": 0
+        }
+      },
+      "per_run": {
+        "r3": {
+          "count": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.05694315340843121,
+            "rmse": 0.08371669133483071,
+            "bias": 0.0433263114749802,
+            "quantile_errors": {
+              "0.1": 0.00018509261358756746,
+              "0.5": 0.01197626886997849,
+              "0.9": 0.02717326512357321,
+              "0.99": 0.07517566457954228
+            },
+            "negative_predictions": 0
+          },
+          "speed": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.2197680558212237,
+            "rmse": 0.4152559276386717,
+            "bias": 0.13439038132167733,
+            "quantile_errors": {
+              "0.1": 0.06541465256244194,
+              "0.5": 0.14452757960474827,
+              "0.9": 0.05386847100374759,
+              "0.99": 0.33497041623945023
+            },
+            "negative_predictions": 0
+          }
+        }
+      },
+      "simulation": []
+    },
+    {
+      "id": "case-0001",
+      "name": "model-1",
+      "seed": 42,
+      "fraction": 0.4,
+      "experiment": "masked",
+      "selection": "medoid",
+      "representative_budget": 2,
+      "selection_applied": false,
+      "input_semantics": "full",
+      "uncalibrated_proxy_ablation": false,
+      "model_artifact": "fit-42-1/model.joblib",
+      "selected_labels": [
+        "a|0",
+        "b|0"
+      ],
+      "observed_values": 12,
+      "reference_values": 30,
+      "fit_seconds": 0.16362637599377194,
+      "prediction_seconds": 0.04630158500367543,
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.5710884345165242,
+          "rmse": 0.7120245530699417,
+          "bias": -0.3983461801121051,
+          "quantile_errors": {
+            "0.1": 0.18127881473773533,
+            "0.5": 0.9289118698571421,
+            "0.9": 0.1311656628704112,
+            "0.99": 0.5128588868676758
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.5306041777730985,
+          "rmse": 0.6426573761931713,
+          "bias": 0.45561518243362037,
+          "quantile_errors": {
+            "0.1": 0.5436606586873856,
+            "0.5": 0.5698820979288204,
+            "0.9": 0.33402944564019066,
+            "0.99": 0.11411353145423853
+          },
+          "negative_predictions": 0
+        }
+      },
+      "per_run": {
+        "r3": {
+          "count": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.5710884345165242,
+            "rmse": 0.7120245530699417,
+            "bias": -0.3983461801121051,
+            "quantile_errors": {
+              "0.1": 0.18127881473773533,
+              "0.5": 0.9289118698571421,
+              "0.9": 0.1311656628704112,
+              "0.99": 0.5128588868676758
+            },
+            "negative_predictions": 0
+          },
+          "speed": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.5306041777730985,
+            "rmse": 0.6426573761931713,
+            "bias": 0.45561518243362037,
+            "quantile_errors": {
+              "0.1": 0.5436606586873856,
+              "0.5": 0.5698820979288204,
+              "0.9": 0.33402944564019066,
+              "0.99": 0.11411353145423853
+            },
+            "negative_predictions": 0
+          }
+        }
+      },
+      "simulation": []
+    },
+    {
+      "id": "case-0002",
+      "name": "model-2",
+      "seed": 42,
+      "fraction": 0.4,
+      "experiment": "masked",
+      "selection": "medoid",
+      "representative_budget": 2,
+      "selection_applied": false,
+      "input_semantics": "full",
+      "uncalibrated_proxy_ablation": false,
+      "model_artifact": "fit-42-2/model.joblib",
+      "selected_labels": [
+        "a|0",
+        "c|0"
+      ],
+      "observed_values": 12,
+      "reference_values": 30,
+      "fit_seconds": 0.011915028997464105,
+      "prediction_seconds": 0.005586211998888757,
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.10639628973858001,
+          "rmse": 0.16405623334873706,
+          "bias": 0.05581822856045049,
+          "quantile_errors": {
+            "0.1": 0.061008209651036704,
+            "0.5": 0.03261082506688684,
+            "0.9": 0.036812590887115526,
+            "0.99": 0.08653099940112252
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.2612710374535044,
+          "rmse": 0.44148691607818374,
+          "bias": 0.03333637921126679,
+          "quantile_errors": {
+            "0.1": 0.06961615064810811,
+            "0.5": 0.2764781866904329,
+            "0.9": 0.08526395767882633,
+            "0.99": 0.031141682910549306
+          },
+          "negative_predictions": 0
+        }
+      },
+      "per_run": {
+        "r3": {
+          "count": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.10639628973858001,
+            "rmse": 0.16405623334873706,
+            "bias": 0.05581822856045049,
+            "quantile_errors": {
+              "0.1": 0.061008209651036704,
+              "0.5": 0.03261082506688684,
+              "0.9": 0.036812590887115526,
+              "0.99": 0.08653099940112252
+            },
+            "negative_predictions": 0
+          },
+          "speed": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.2612710374535044,
+            "rmse": 0.44148691607818374,
+            "bias": 0.03333637921126679,
+            "quantile_errors": {
+              "0.1": 0.06961615064810811,
+              "0.5": 0.2764781866904329,
+              "0.9": 0.08526395767882633,
+              "0.99": 0.031141682910549306
+            },
+            "negative_predictions": 0
+          }
+        }
+      },
+      "simulation": []
+    },
+    {
+      "id": "case-0003",
+      "name": "model-3",
+      "seed": 42,
+      "fraction": 0.4,
+      "experiment": "masked",
+      "selection": "medoid",
+      "representative_budget": 2,
+      "selection_applied": false,
+      "input_semantics": "full",
+      "uncalibrated_proxy_ablation": false,
+      "model_artifact": "fit-42-3/model.joblib",
+      "selected_labels": [
+        "a|0",
+        "b|0"
+      ],
+      "observed_values": 12,
+      "reference_values": 30,
+      "fit_seconds": 0.15015670899447287,
+      "prediction_seconds": 0.033490339999843854,
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.2080417860561204,
+          "rmse": 0.2508754648065937,
+          "bias": 0.015353714392046778,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.14844144378973212,
+            "0.9": 0.12474479345726497,
+            "0.99": 0.41243887963711146
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.7207706658519931,
+          "rmse": 0.8788926703956242,
+          "bias": 0.06962818946986202,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.6113780490924672,
+            "0.9": 0.3348329218832422,
+            "0.99": 0.6784572481532063
+          },
+          "negative_predictions": 0
+        }
+      },
+      "per_run": {
+        "r3": {
+          "count": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.2080417860561204,
+            "rmse": 0.2508754648065937,
+            "bias": 0.015353714392046778,
+            "quantile_errors": {
+              "0.1": 0.06569225686133429,
+              "0.5": 0.14844144378973212,
+              "0.9": 0.12474479345726497,
+              "0.99": 0.41243887963711146
+            },
+            "negative_predictions": 0
+          },
+          "speed": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.7207706658519931,
+            "rmse": 0.8788926703956242,
+            "bias": 0.06962818946986202,
+            "quantile_errors": {
+              "0.1": 0.04013940214811207,
+              "0.5": 0.6113780490924672,
+              "0.9": 0.3348329218832422,
+              "0.99": 0.6784572481532063
+            },
+            "negative_predictions": 0
+          }
+        }
+      },
+      "simulation": []
+    },
+    {
+      "id": "case-0004",
+      "name": "model-4",
+      "seed": 42,
+      "fraction": 0.4,
+      "experiment": "masked",
+      "selection": "medoid",
+      "representative_budget": 2,
+      "selection_applied": false,
+      "input_semantics": "full",
+      "uncalibrated_proxy_ablation": false,
+      "model_artifact": "fit-42-4/model.joblib",
+      "selected_labels": [
+        "a|0",
+        "b|0"
+      ],
+      "observed_values": 12,
+      "reference_values": 30,
+      "fit_seconds": 0.1633854000028805,
+      "prediction_seconds": 0.0638881949998904,
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.29055872715975395,
+          "rmse": 0.4801640677904463,
+          "bias": -0.22836747215595432,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.6714339104187212,
+            "0.9": 0.0472912483083654,
+            "0.99": 0.06635199255027135
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.04724042133415137,
+          "rmse": 0.05264408390531689,
+          "bias": 0.013789687735401223,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.08855379386516837,
+            "0.9": 0.018619617404402433,
+            "0.99": 0.06413184751170142
+          },
+          "negative_predictions": 0
+        }
+      },
+      "per_run": {
+        "r3": {
+          "count": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.29055872715975395,
+            "rmse": 0.4801640677904463,
+            "bias": -0.22836747215595432,
+            "quantile_errors": {
+              "0.1": 0.06569225686133429,
+              "0.5": 0.6714339104187212,
+              "0.9": 0.0472912483083654,
+              "0.99": 0.06635199255027135
+            },
+            "negative_predictions": 0
+          },
+          "speed": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.04724042133415137,
+            "rmse": 0.05264408390531689,
+            "bias": 0.013789687735401223,
+            "quantile_errors": {
+              "0.1": 0.04013940214811207,
+              "0.5": 0.08855379386516837,
+              "0.9": 0.018619617404402433,
+              "0.99": 0.06413184751170142
+            },
+            "negative_predictions": 0
+          }
+        }
+      },
+      "simulation": []
+    },
+    {
+      "id": "case-0005",
+      "name": "model-5",
+      "seed": 42,
+      "fraction": 0.4,
+      "experiment": "masked",
+      "selection": "medoid",
+      "representative_budget": 2,
+      "selection_applied": false,
+      "input_semantics": "full",
+      "uncalibrated_proxy_ablation": false,
+      "model_artifact": "fit-42-5/model.joblib",
+      "selected_labels": [
+        "a|0",
+        "c|0"
+      ],
+      "observed_values": 12,
+      "reference_values": 30,
+      "fit_seconds": 0.011296390002826229,
+      "prediction_seconds": 0.0032078799995360896,
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.22254782584275898,
+          "rmse": 0.27555200546017106,
+          "bias": 0.02985975417868536,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.14844144378973212,
+            "0.9": 0.020301306993466994,
+            "0.99": 0.40199453099073157
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.8137216565088322,
+          "rmse": 0.8773970649044828,
+          "bias": -0.3572433252105111,
+          "quantile_errors": {
+            "0.1": 0.3560716936774453,
+            "0.5": 0.8002177717100665,
+            "0.9": 0.5251653485661247,
+            "0.99": 0.5511590793815238
+          },
+          "negative_predictions": 0
+        }
+      },
+      "per_run": {
+        "r3": {
+          "count": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.22254782584275898,
+            "rmse": 0.27555200546017106,
+            "bias": 0.02985975417868536,
+            "quantile_errors": {
+              "0.1": 0.06569225686133429,
+              "0.5": 0.14844144378973212,
+              "0.9": 0.020301306993466994,
+              "0.99": 0.40199453099073157
+            },
+            "negative_predictions": 0
+          },
+          "speed": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.8137216565088322,
+            "rmse": 0.8773970649044828,
+            "bias": -0.3572433252105111,
+            "quantile_errors": {
+              "0.1": 0.3560716936774453,
+              "0.5": 0.8002177717100665,
+              "0.9": 0.5251653485661247,
+              "0.99": 0.5511590793815238
+            },
+            "negative_predictions": 0
+          }
+        }
+      },
+      "simulation": []
+    },
+    {
+      "id": "case-0006",
+      "name": "model-6",
+      "seed": 42,
+      "fraction": 0.4,
+      "experiment": "masked",
+      "selection": "medoid",
+      "representative_budget": 2,
+      "selection_applied": false,
+      "input_semantics": "full",
+      "uncalibrated_proxy_ablation": false,
+      "model_artifact": "fit-42-6/model.joblib",
+      "selected_labels": [
+        "a|0",
+        "b|0"
+      ],
+      "observed_values": 12,
+      "reference_values": 30,
+      "fit_seconds": 0.1484164859939483,
+      "prediction_seconds": 0.01631499700306449,
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.22254782584275898,
+          "rmse": 0.27555200546017106,
+          "bias": 0.02985975417868536,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.14844144378973212,
+            "0.9": 0.020301306993466994,
+            "0.99": 0.40199453099073157
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.7046412444284648,
+          "rmse": 0.8543363772641135,
+          "bias": 0.05349876804633366,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.6113780490924672,
+            "0.9": 0.36386588044559254,
+            "0.99": 0.8120088575400217
+          },
+          "negative_predictions": 0
+        }
+      },
+      "per_run": {
+        "r3": {
+          "count": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.22254782584275898,
+            "rmse": 0.27555200546017106,
+            "bias": 0.02985975417868536,
+            "quantile_errors": {
+              "0.1": 0.06569225686133429,
+              "0.5": 0.14844144378973212,
+              "0.9": 0.020301306993466994,
+              "0.99": 0.40199453099073157
+            },
+            "negative_predictions": 0
+          },
+          "speed": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.7046412444284648,
+            "rmse": 0.8543363772641135,
+            "bias": 0.05349876804633366,
+            "quantile_errors": {
+              "0.1": 0.04013940214811207,
+              "0.5": 0.6113780490924672,
+              "0.9": 0.36386588044559254,
+              "0.99": 0.8120088575400217
+            },
+            "negative_predictions": 0
+          }
+        }
+      },
+      "simulation": []
+    },
+    {
+      "id": "case-0007",
+      "name": "model-7",
+      "seed": 42,
+      "fraction": 0.4,
+      "experiment": "masked",
+      "selection": "medoid",
+      "representative_budget": 2,
+      "selection_applied": false,
+      "input_semantics": "full",
+      "uncalibrated_proxy_ablation": false,
+      "model_artifact": "fit-42-7/model.joblib",
+      "selected_labels": [
+        "a|0",
+        "b|0"
+      ],
+      "observed_values": 12,
+      "reference_values": 30,
+      "fit_seconds": 0.1562495729958755,
+      "prediction_seconds": 0.03944276300171623,
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.28321320634861746,
+          "rmse": 0.46984720437132127,
+          "bias": -0.2210219513448178,
+          "quantile_errors": {
+            "0.1": 0.023664705503929184,
+            "0.5": 0.5527897839217362,
+            "0.9": 0.0472912483083654,
+            "0.99": 0.06635199255027135
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.04724042133415137,
+          "rmse": 0.05264408390531689,
+          "bias": 0.013789687735401223,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.08855379386516837,
+            "0.9": 0.018619617404402433,
+            "0.99": 0.06413184751170142
+          },
+          "negative_predictions": 0
+        }
+      },
+      "per_run": {
+        "r3": {
+          "count": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.28321320634861746,
+            "rmse": 0.46984720437132127,
+            "bias": -0.2210219513448178,
+            "quantile_errors": {
+              "0.1": 0.023664705503929184,
+              "0.5": 0.5527897839217362,
+              "0.9": 0.0472912483083654,
+              "0.99": 0.06635199255027135
+            },
+            "negative_predictions": 0
+          },
+          "speed": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.04724042133415137,
+            "rmse": 0.05264408390531689,
+            "bias": 0.013789687735401223,
+            "quantile_errors": {
+              "0.1": 0.04013940214811207,
+              "0.5": 0.08855379386516837,
+              "0.9": 0.018619617404402433,
+              "0.99": 0.06413184751170142
+            },
+            "negative_predictions": 0
+          }
+        }
+      },
+      "simulation": []
+    },
+    {
+      "id": "case-0008",
+      "name": "model-8",
+      "seed": 42,
+      "fraction": 0.4,
+      "experiment": "masked",
+      "selection": "medoid",
+      "representative_budget": 2,
+      "selection_applied": false,
+      "input_semantics": "full",
+      "uncalibrated_proxy_ablation": false,
+      "model_artifact": "fit-42-8/model.joblib",
+      "selected_labels": [
+        "a|0",
+        "c|0"
+      ],
+      "observed_values": 12,
+      "reference_values": 30,
+      "fit_seconds": 0.01124464999884367,
+      "prediction_seconds": 0.003454496996710077,
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.22254782584275898,
+          "rmse": 0.27555200546017106,
+          "bias": 0.02985975417868536,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.14844144378973212,
+            "0.9": 0.020301306993466994,
+            "0.99": 0.40199453099073157
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.8137216565088322,
+          "rmse": 0.8773970649044828,
+          "bias": -0.3572433252105111,
+          "quantile_errors": {
+            "0.1": 0.3560716936774453,
+            "0.5": 0.8002177717100665,
+            "0.9": 0.5251653485661247,
+            "0.99": 0.5511590793815238
+          },
+          "negative_predictions": 0
+        }
+      },
+      "per_run": {
+        "r3": {
+          "count": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.22254782584275898,
+            "rmse": 0.27555200546017106,
+            "bias": 0.02985975417868536,
+            "quantile_errors": {
+              "0.1": 0.06569225686133429,
+              "0.5": 0.14844144378973212,
+              "0.9": 0.020301306993466994,
+              "0.99": 0.40199453099073157
+            },
+            "negative_predictions": 0
+          },
+          "speed": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.8137216565088322,
+            "rmse": 0.8773970649044828,
+            "bias": -0.3572433252105111,
+            "quantile_errors": {
+              "0.1": 0.3560716936774453,
+              "0.5": 0.8002177717100665,
+              "0.9": 0.5251653485661247,
+              "0.99": 0.5511590793815238
+            },
+            "negative_predictions": 0
+          }
+        }
+      },
+      "simulation": []
+    },
+    {
+      "id": "case-0009",
+      "name": "model-9",
+      "seed": 42,
+      "fraction": 0.4,
+      "experiment": "masked",
+      "selection": "medoid",
+      "representative_budget": 2,
+      "selection_applied": false,
+      "input_semantics": "full",
+      "uncalibrated_proxy_ablation": false,
+      "model_artifact": "fit-42-9/model.joblib",
+      "selected_labels": [
+        "a|0",
+        "b|0"
+      ],
+      "observed_values": 12,
+      "reference_values": 30,
+      "fit_seconds": 0.15725417599605862,
+      "prediction_seconds": 0.01846969000325771,
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.036290928702076335,
+          "rmse": 0.04789744067153321,
+          "bias": 0.029859754178685458,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.01663593096698257,
+            "0.9": 0.02765247921353886,
+            "0.99": 0.05822612567141494
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.04764031997170864,
+          "rmse": 0.05262809251484659,
+          "bias": 0.009819389424608952,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.08855379386516837,
+            "0.9": 0.030521359716949803,
+            "0.99": 0.07106847179522191
+          },
+          "negative_predictions": 0
+        }
+      },
+      "per_run": {
+        "r3": {
+          "count": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.036290928702076335,
+            "rmse": 0.04789744067153321,
+            "bias": 0.029859754178685458,
+            "quantile_errors": {
+              "0.1": 0.06569225686133429,
+              "0.5": 0.01663593096698257,
+              "0.9": 0.02765247921353886,
+              "0.99": 0.05822612567141494
+            },
+            "negative_predictions": 0
+          },
+          "speed": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.04764031997170864,
+            "rmse": 0.05262809251484659,
+            "bias": 0.009819389424608952,
+            "quantile_errors": {
+              "0.1": 0.04013940214811207,
+              "0.5": 0.08855379386516837,
+              "0.9": 0.030521359716949803,
+              "0.99": 0.07106847179522191
+            },
+            "negative_predictions": 0
+          }
+        }
+      },
+      "simulation": []
+    },
+    {
+      "id": "case-0010",
+      "name": "model-10",
+      "seed": 42,
+      "fraction": 0.4,
+      "experiment": "masked",
+      "selection": "medoid",
+      "representative_budget": 2,
+      "selection_applied": false,
+      "input_semantics": "full",
+      "uncalibrated_proxy_ablation": false,
+      "model_artifact": "fit-42-10/model.joblib",
+      "selected_labels": [
+        "a|0",
+        "b|0"
+      ],
+      "observed_values": 12,
+      "reference_values": 30,
+      "fit_seconds": 0.19277243399847066,
+      "prediction_seconds": 0.04030072799650952,
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.036290928702076335,
+          "rmse": 0.04789744067153321,
+          "bias": 0.029859754178685458,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.01663593096698257,
+            "0.9": 0.02765247921353886,
+            "0.99": 0.05822612567141494
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.04764031997170864,
+          "rmse": 0.05262809251484659,
+          "bias": 0.009819389424608952,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.08855379386516837,
+            "0.9": 0.030521359716949803,
+            "0.99": 0.07106847179522191
+          },
+          "negative_predictions": 0
+        }
+      },
+      "per_run": {
+        "r3": {
+          "count": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.036290928702076335,
+            "rmse": 0.04789744067153321,
+            "bias": 0.029859754178685458,
+            "quantile_errors": {
+              "0.1": 0.06569225686133429,
+              "0.5": 0.01663593096698257,
+              "0.9": 0.02765247921353886,
+              "0.99": 0.05822612567141494
+            },
+            "negative_predictions": 0
+          },
+          "speed": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.04764031997170864,
+            "rmse": 0.05262809251484659,
+            "bias": 0.009819389424608952,
+            "quantile_errors": {
+              "0.1": 0.04013940214811207,
+              "0.5": 0.08855379386516837,
+              "0.9": 0.030521359716949803,
+              "0.99": 0.07106847179522191
+            },
+            "negative_predictions": 0
+          }
+        }
+      },
+      "simulation": []
+    },
+    {
+      "id": "case-0011",
+      "name": "model-11",
+      "seed": 42,
+      "fraction": 0.4,
+      "experiment": "masked",
+      "selection": "medoid",
+      "representative_budget": 2,
+      "selection_applied": false,
+      "input_semantics": "full",
+      "uncalibrated_proxy_ablation": false,
+      "model_artifact": "fit-42-11/model.joblib",
+      "selected_labels": [
+        "a|0",
+        "c|0"
+      ],
+      "observed_values": 12,
+      "reference_values": 30,
+      "fit_seconds": 0.011051720997784287,
+      "prediction_seconds": 0.00388855799974408,
+      "metrics": {
+        "count": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.036290928702076335,
+          "rmse": 0.04789744067153321,
+          "bias": 0.029859754178685458,
+          "quantile_errors": {
+            "0.1": 0.06569225686133429,
+            "0.5": 0.01663593096698257,
+            "0.9": 0.02765247921353886,
+            "0.99": 0.05822612567141494
+          },
+          "negative_predictions": 0
+        },
+        "speed": {
+          "eligible": 9,
+          "estimated": 9,
+          "coverage": 1.0,
+          "mae": 0.04764031997170864,
+          "rmse": 0.05262809251484659,
+          "bias": 0.009819389424608952,
+          "quantile_errors": {
+            "0.1": 0.04013940214811207,
+            "0.5": 0.08855379386516837,
+            "0.9": 0.030521359716949803,
+            "0.99": 0.07106847179522191
+          },
+          "negative_predictions": 0
+        }
+      },
+      "per_run": {
+        "r3": {
+          "count": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.036290928702076335,
+            "rmse": 0.04789744067153321,
+            "bias": 0.029859754178685458,
+            "quantile_errors": {
+              "0.1": 0.06569225686133429,
+              "0.5": 0.01663593096698257,
+              "0.9": 0.02765247921353886,
+              "0.99": 0.05822612567141494
+            },
+            "negative_predictions": 0
+          },
+          "speed": {
+            "eligible": 9,
+            "estimated": 9,
+            "coverage": 1.0,
+            "mae": 0.04764031997170864,
+            "rmse": 0.05262809251484659,
+            "bias": 0.009819389424608952,
+            "quantile_errors": {
+              "0.1": 0.04013940214811207,
+              "0.5": 0.08855379386516837,
+              "0.9": 0.030521359716949803,
+              "0.99": 0.07106847179522191
+            },
+            "negative_predictions": 0
+          }
+        }
+      },
+      "simulation": []
+    }
+  ],
+  "summary": [
+    {
+      "name": "model-0",
+      "fraction": 0.4,
+      "variable": "count",
+      "seeds": 1,
+      "mae_mean": 0.05694315340843121,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-0",
+      "fraction": 0.4,
+      "variable": "speed",
+      "seeds": 1,
+      "mae_mean": 0.2197680558212237,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-1",
+      "fraction": 0.4,
+      "variable": "count",
+      "seeds": 1,
+      "mae_mean": 0.5710884345165242,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-1",
+      "fraction": 0.4,
+      "variable": "speed",
+      "seeds": 1,
+      "mae_mean": 0.5306041777730985,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-2",
+      "fraction": 0.4,
+      "variable": "count",
+      "seeds": 1,
+      "mae_mean": 0.10639628973858001,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-2",
+      "fraction": 0.4,
+      "variable": "speed",
+      "seeds": 1,
+      "mae_mean": 0.2612710374535044,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-3",
+      "fraction": 0.4,
+      "variable": "count",
+      "seeds": 1,
+      "mae_mean": 0.2080417860561204,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-3",
+      "fraction": 0.4,
+      "variable": "speed",
+      "seeds": 1,
+      "mae_mean": 0.7207706658519931,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-4",
+      "fraction": 0.4,
+      "variable": "count",
+      "seeds": 1,
+      "mae_mean": 0.29055872715975395,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-4",
+      "fraction": 0.4,
+      "variable": "speed",
+      "seeds": 1,
+      "mae_mean": 0.04724042133415137,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-5",
+      "fraction": 0.4,
+      "variable": "count",
+      "seeds": 1,
+      "mae_mean": 0.22254782584275898,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-5",
+      "fraction": 0.4,
+      "variable": "speed",
+      "seeds": 1,
+      "mae_mean": 0.8137216565088322,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-6",
+      "fraction": 0.4,
+      "variable": "count",
+      "seeds": 1,
+      "mae_mean": 0.22254782584275898,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-6",
+      "fraction": 0.4,
+      "variable": "speed",
+      "seeds": 1,
+      "mae_mean": 0.7046412444284648,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-7",
+      "fraction": 0.4,
+      "variable": "count",
+      "seeds": 1,
+      "mae_mean": 0.28321320634861746,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-7",
+      "fraction": 0.4,
+      "variable": "speed",
+      "seeds": 1,
+      "mae_mean": 0.04724042133415137,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-8",
+      "fraction": 0.4,
+      "variable": "count",
+      "seeds": 1,
+      "mae_mean": 0.22254782584275898,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-8",
+      "fraction": 0.4,
+      "variable": "speed",
+      "seeds": 1,
+      "mae_mean": 0.8137216565088322,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-9",
+      "fraction": 0.4,
+      "variable": "count",
+      "seeds": 1,
+      "mae_mean": 0.036290928702076335,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-9",
+      "fraction": 0.4,
+      "variable": "speed",
+      "seeds": 1,
+      "mae_mean": 0.04764031997170864,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-10",
+      "fraction": 0.4,
+      "variable": "count",
+      "seeds": 1,
+      "mae_mean": 0.036290928702076335,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-10",
+      "fraction": 0.4,
+      "variable": "speed",
+      "seeds": 1,
+      "mae_mean": 0.04764031997170864,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-11",
+      "fraction": 0.4,
+      "variable": "count",
+      "seeds": 1,
+      "mae_mean": 0.036290928702076335,
+      "mae_std_across_seeds": null
+    },
+    {
+      "name": "model-11",
+      "fraction": 0.4,
+      "variable": "speed",
+      "seeds": 1,
+      "mae_mean": 0.04764031997170864,
+      "mae_std_across_seeds": null
+    }
+  ]
+}

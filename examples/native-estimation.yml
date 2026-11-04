@@ -1,0 +1,29 @@
+config:
+  scenario_name: occupancy-estimation
+  data_source: clickhouse
+  input_dir: output/occupancy-model
+  output_dir: output/occupancy-estimation
+  street_info_file: input/street_info.csv
+  intervals:
+    start_time: 0
+    end_time: 86400
+    interval_size: 3600
+    sample_period: 60
+  clickhouse:
+    simulation_id: full-training-run
+    table: vehicle_link_events
+stages:
+  - data_load
+  - process_dataset
+  - name: scenario_metrics
+    params:
+      reference_dir: full-reference-run
+  - name: estimation_variants
+    params:
+      second_scenario_dir: partial-run
+      percentage_sample: 10
+      variants: [avg, sample, pca_sp, pca_d_delta, pca_d_wavg_eig]
+      workers: 2
+  - name: compare
+    params:
+      estimated_files: [result_avg, result_sample, result_pca_sp, result_pca_d_delta, result_pca_d_wavg_eig]

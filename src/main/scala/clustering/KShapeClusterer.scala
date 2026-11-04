@@ -46,7 +46,7 @@ object KShapeClusterer:
     // Convert to tslearn4j format: RealMatrix[] where each is [length × 1]
     val tsData = dataset.normalised.map { series =>
       require(series.length == length, "All series must have the same length")
-      new Array2DRowRealMatrix(series): org.apache.commons.math3.linear.RealMatrix
+      MatrixUtils.arrayToMatrix(series)
     }
 
     val kshape = new KShape(

@@ -185,3 +185,5 @@ k8s/rendered/
 k8s/generated/
 
 .github/copilot-instructions.md
+# Native service state
+/state/

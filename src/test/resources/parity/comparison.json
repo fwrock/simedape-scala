@@ -1,0 +1,257 @@
+{
+  "real": {
+    "labels": [
+      "a",
+      "b",
+      "c"
+    ],
+    "average_speed": [
+      10.0,
+      20.0,
+      0.0
+    ],
+    "percentage_of_track": [
+      0.0,
+      25.0,
+      50.0
+    ],
+    "average_vehicles": [
+      0.0,
+      2.0,
+      4.0
+    ],
+    "km_traveled": [
+      0.1,
+      0.2,
+      0.4
+    ]
+  },
+  "estimated": {
+    "labels": [
+      "c",
+      "a"
+    ],
+    "average_speed": [
+      1.0,
+      12.0
+    ],
+    "percentage_of_track": [
+      40.0,
+      0.0
+    ],
+    "average_vehicles": [
+      3.0,
+      0.0
+    ],
+    "km_traveled": [
+      0.3,
+      0.1
+    ]
+  },
+  "expected": {
+    "label": "fixture",
+    "n_real": 3,
+    "n_estimated": 2,
+    "coverage_pct": 66.67,
+    "pairing": "label",
+    "n_paired": 2,
+    "aggregate": {
+      "real": {
+        "average_speed": 10.000000000000002,
+        "percentage_of_track": 49.99999999999999,
+        "average_vehicles": 4.0,
+        "km_traveled": 0.2
+      },
+      "estimated": {
+        "average_speed": 3.464101615137755,
+        "percentage_of_track": 40.0,
+        "average_vehicles": 3.0000000000000004,
+        "km_traveled": 0.17320508075688773
+      },
+      "error_pct": {
+        "average_speed": -65.35898384862244,
+        "percentage_of_track": -19.99999999999999,
+        "average_vehicles": -24.99999999999999,
+        "km_traveled": -13.39745962155614
+      }
+    },
+    "per_series_error": {
+      "average_speed": {
+        "min": 20.0,
+        "max": 20.0,
+        "mean": 20.0,
+        "median": 20.0,
+        "std": 0.0,
+        "mape": 20.0,
+        "p25": 20.0,
+        "p75": 20.0
+      },
+      "percentage_of_track": {
+        "min": -20.0,
+        "max": -20.0,
+        "mean": -20.0,
+        "median": -20.0,
+        "std": 0.0,
+        "mape": 20.0,
+        "p25": -20.0,
+        "p75": -20.0
+      },
+      "average_vehicles": {
+        "min": -25.0,
+        "max": -25.0,
+        "mean": -25.0,
+        "median": -25.0,
+        "std": 0.0,
+        "mape": 25.0,
+        "p25": -25.0,
+        "p75": -25.0
+      },
+      "km_traveled": {
+        "min": -25.000000000000007,
+        "max": 0.0,
+        "mean": -12.500000000000004,
+        "median": -12.500000000000004,
+        "std": 12.500000000000004,
+        "mape": 12.500000000000004,
+        "p25": -18.750000000000007,
+        "p75": -6.250000000000002
+      }
+    },
+    "robust": {
+      "average_speed": {
+        "n": 2,
+        "wape": 30.0,
+        "smape": 109.09090909090908,
+        "median_ape": 20.0,
+        "bias_pct": 30.0,
+        "rmse": 1.5811388300841898,
+        "mae": 1.5,
+        "pearson": null,
+        "spearman": null
+      },
+      "percentage_of_track": {
+        "n": 2,
+        "wape": 20.0,
+        "smape": 11.11111111111111,
+        "median_ape": 20.0,
+        "bias_pct": -20.0,
+        "rmse": 7.0710678118654755,
+        "mae": 5.0,
+        "pearson": null,
+        "spearman": null
+      },
+      "average_vehicles": {
+        "n": 2,
+        "wape": 25.0,
+        "smape": 14.285714285714285,
+        "median_ape": 25.0,
+        "bias_pct": -25.0,
+        "rmse": 0.7071067811865476,
+        "mae": 0.5,
+        "pearson": null,
+        "spearman": null
+      },
+      "km_traveled": {
+        "n": 2,
+        "wape": 20.000000000000007,
+        "smape": 14.28571428571429,
+        "median_ape": 12.500000000000004,
+        "bias_pct": -20.000000000000007,
+        "rmse": 0.07071067811865478,
+        "mae": 0.05000000000000002,
+        "pearson": null,
+        "spearman": null
+      }
+    },
+    "specific": {
+      "worst": {
+        "average_speed": [
+          {
+            "label": "a",
+            "real": 10.0,
+            "estimated": 12.0,
+            "error_pct": 20.0
+          }
+        ],
+        "percentage_of_track": [
+          {
+            "label": "c",
+            "real": 50.0,
+            "estimated": 40.0,
+            "error_pct": 20.0
+          }
+        ],
+        "average_vehicles": [
+          {
+            "label": "c",
+            "real": 4.0,
+            "estimated": 3.0,
+            "error_pct": 25.0
+          }
+        ],
+        "km_traveled": [
+          {
+            "label": "c",
+            "real": 0.4,
+            "estimated": 0.3,
+            "error_pct": 25.000000000000007
+          },
+          {
+            "label": "a",
+            "real": 0.1,
+            "estimated": 0.1,
+            "error_pct": 0.0
+          }
+        ]
+      },
+      "scatter": {
+        "average_speed": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            10.0,
+            12.0
+          ]
+        ],
+        "percentage_of_track": [
+          [
+            50.0,
+            40.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "average_vehicles": [
+          [
+            4.0,
+            3.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "km_traveled": [
+          [
+            0.4,
+            0.3
+          ],
+          [
+            0.1,
+            0.1
+          ]
+        ]
+      },
+      "breakdowns": {
+        "average_speed": {},
+        "percentage_of_track": {},
+        "average_vehicles": {},
+        "km_traveled": {}
+      }
+    }
+  }
+}

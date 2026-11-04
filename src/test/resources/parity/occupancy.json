@@ -1,0 +1,261 @@
+{
+  "events": [
+    {
+      "link_id": "3",
+      "tick": 0,
+      "vehicle_id": "a",
+      "vehicle_count_on_link": 1
+    },
+    {
+      "link_id": "3",
+      "tick": 10,
+      "vehicle_id": "b",
+      "vehicle_count_on_link": 2
+    },
+    {
+      "link_id": "3",
+      "tick": 20,
+      "vehicle_id": "a",
+      "vehicle_count_on_link": 1
+    },
+    {
+      "link_id": "3",
+      "tick": 60,
+      "vehicle_id": "b",
+      "vehicle_count_on_link": 0
+    },
+    {
+      "link_id": "3",
+      "tick": 70,
+      "vehicle_id": "c",
+      "vehicle_count_on_link": 1
+    },
+    {
+      "link_id": "3",
+      "tick": 90,
+      "vehicle_id": "c",
+      "vehicle_count_on_link": 2
+    },
+    {
+      "link_id": "3",
+      "tick": 120,
+      "vehicle_id": "c",
+      "vehicle_count_on_link": 0
+    },
+    {
+      "link_id": "5",
+      "tick": 5,
+      "vehicle_id": "d",
+      "vehicle_count_on_link": 1
+    },
+    {
+      "link_id": "5",
+      "tick": 50,
+      "vehicle_id": "d",
+      "vehicle_count_on_link": 0
+    },
+    {
+      "link_id": "5",
+      "tick": 55,
+      "vehicle_id": "e",
+      "vehicle_count_on_link": 1
+    },
+    {
+      "link_id": "5",
+      "tick": 100,
+      "vehicle_id": "e",
+      "vehicle_count_on_link": 0
+    }
+  ],
+  "intervals": {
+    "start_time": 0,
+    "end_time": 120,
+    "interval_size": 60,
+    "sample_period": 10
+  },
+  "roads": {
+    "3": [
+      75.0,
+      10.0,
+      10.0
+    ],
+    "5": [
+      150.0,
+      20.0,
+      20.0
+    ],
+    "8": [
+      37.5,
+      5.0,
+      5.0
+    ]
+  },
+  "labels": [
+    "3-0-60",
+    "3-60-120",
+    "5-0-60",
+    "5-60-120",
+    "8-0-60",
+    "8-60-120"
+  ],
+  "series": [
+    [
+      1.0,
+      2.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0,
+      1.0,
+      2.0,
+      2.0,
+      2.0
+    ],
+    [
+      0.5,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.5
+    ],
+    [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "members": [
+    [
+      "a",
+      "b"
+    ],
+    [
+      "c"
+    ],
+    [
+      "d",
+      "e"
+    ],
+    [
+      "e"
+    ],
+    [],
+    []
+  ],
+  "vehicles": {
+    "3": [
+      [
+        "a",
+        "b"
+      ],
+      [
+        "c"
+      ]
+    ],
+    "5": [
+      [
+        "d",
+        "e"
+      ],
+      [
+        "e"
+      ]
+    ],
+    "8": [
+      [],
+      []
+    ]
+  },
+  "metrics": [
+    {
+      "average_speed": 8.82504826029864,
+      "percentage_of_track": 11.666666666666666,
+      "average_vehicles": 1.1666666666666667,
+      "km_traveled": 0.15,
+      "density_veh_km": 15.555555555555557,
+      "speed_index": 0.8833333333333334,
+      "delay_index": 0.1342592592592593,
+      "peak_occupancy": 20.0,
+      "congested_time_pct": 0.0
+    },
+    {
+      "average_speed": 8.635599582130512,
+      "percentage_of_track": 13.333333333333334,
+      "average_vehicles": 1.3333333333333333,
+      "km_traveled": 0.225,
+      "density_veh_km": 17.77777777777778,
+      "speed_index": 0.8666666666666666,
+      "delay_index": 0.16203703703703698,
+      "peak_occupancy": 20.0,
+      "congested_time_pct": 0.0
+    },
+    {
+      "average_speed": 19.165225684567908,
+      "percentage_of_track": 4.166666666666667,
+      "average_vehicles": 0.8333333333333334,
+      "km_traveled": 0.225,
+      "density_veh_km": 5.555555555555556,
+      "speed_index": 0.9583333333333334,
+      "delay_index": 0.04363472784525402,
+      "peak_occupancy": 5.0,
+      "congested_time_pct": 0.0
+    },
+    {
+      "average_speed": 19.32765059563091,
+      "percentage_of_track": 3.3333333333333335,
+      "average_vehicles": 0.6666666666666666,
+      "km_traveled": 0.15,
+      "density_veh_km": 4.444444444444445,
+      "speed_index": 0.9666666666666667,
+      "delay_index": 0.0350877192982455,
+      "peak_occupancy": 5.0,
+      "congested_time_pct": 0.0
+    },
+    {
+      "average_speed": 4.999999999999999,
+      "percentage_of_track": 0.0,
+      "average_vehicles": 0.0,
+      "km_traveled": 0.0375,
+      "density_veh_km": 0.0,
+      "speed_index": 1.0,
+      "delay_index": 0.0,
+      "peak_occupancy": 0.0,
+      "congested_time_pct": 0.0
+    },
+    {
+      "average_speed": 4.999999999999999,
+      "percentage_of_track": 0.0,
+      "average_vehicles": 0.0,
+      "km_traveled": 0.0375,
+      "density_veh_km": 0.0,
+      "speed_index": 1.0,
+      "delay_index": 0.0,
+      "peak_occupancy": 0.0,
+      "congested_time_pct": 0.0
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "cases": [
+    {
+      "config": {
+        "variables": [
+          "count",
+          "speed",
+          "speed_std",
+          "acceleration",
+          "acceleration_positive",
+          "deceleration",
+          "gap",
+          "gap_p10",
+          "queue",
+          "flow",
+          "lane_changes",
+          "distance",
+          "position"
+        ],
+        "start_seconds": 0,
+        "end_seconds": 8,
+        "bin_seconds": 2,
+        "window_bins": 2,
+        "complete_snapshots": true,
+        "complete_events": true,
+        "link_ids": [
+          "a",
+          "b",
+          "c"
+        ],
+        "groups": {
+          "a": "g0",
+          "b": "g1"
+        }
+      },
+      "file": "observation-reference-0.npz"
+    },
+    {
+      "config": {
+        "variables": [
+          "count",
+          "speed",
+          "speed_std",
+          "acceleration",
+          "acceleration_positive",
+          "deceleration",
+          "gap",
+          "gap_p10",
+          "queue",
+          "flow",
+          "lane_changes",
+          "distance",
+          "position"
+        ],
+        "start_seconds": 0,
+        "end_seconds": 8,
+        "bin_seconds": 2,
+        "window_bins": 2,
+        "complete_snapshots": true,
+        "complete_events": true,
+        "link_ids": [
+          "a",
+          "b",
+          "c"
+        ],
+        "count_source": "events"
+      },
+      "file": "observation-reference-1.npz"
+    },
+    {
+      "config": {
+        "variables": [
+          "speed",
+          "speed_std",
+          "acceleration",
+          "acceleration_positive",
+          "deceleration",
+          "gap",
+          "gap_p10",
+          "lane_changes",
+          "distance",
+          "position"
+        ],
+        "start_seconds": 0,
+        "end_seconds": 8,
+        "bin_seconds": 2,
+        "window_bins": 2,
+        "representation": "vehicle",
+        "alignment": "departure",
+        "complete_events": true
+      },
+      "file": "observation-reference-2.npz"
+    }
+  ],
+  "fingerprints": {
+    "observations.csv": "a390d5638fe13597d7b2c35e7eb7209a2639ff9c3cb7eab6e2f9e150acbfcc84",
+    "observations.parquet": "fd5158ef1ceb78b296acdacac20318c8b717708bb3be75a85819c0e9eb450226",
+    "observations-parts": "59f888a4051a0273d0c5d5f7f7b0951e7567be2a1fa3bfbe67da19aeae13bea4"
+  }
+}

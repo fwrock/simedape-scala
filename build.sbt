@@ -47,6 +47,7 @@ lazy val root = (project in file("."))
     assembly / assemblyMergeStrategy := {
       case PathList("META-INF", "services", _*) => MergeStrategy.filterDistinctLines
       case PathList("META-INF", "maven", "org.bytedeco", _*) => MergeStrategy.first
+      case PathList("META-INF", name) if name.toUpperCase.startsWith("LICENSE") || name.toUpperCase.startsWith("NOTICE") => MergeStrategy.concat
       case PathList("META-INF", _*)             => MergeStrategy.discard
       case "reference.conf"                     => MergeStrategy.concat
       case "application.conf"                   => MergeStrategy.concat
@@ -78,7 +79,7 @@ lazy val root = (project in file("."))
       "com.zaxxer"     % "HikariCP"         % "5.1.0",
 
       // tslearn4j — KShape clustering + preprocessing
-      "org.htc" % "tslearn4j" % "1.0",
+      "org.htc" % "tslearn4j" % "1.1.0-SNAPSHOT",
 
       // Apache Commons Math (transitive via tslearn4j; explicit for reliability)
       "org.apache.commons" % "commons-math3" % commonsMathVersion,
@@ -97,6 +98,10 @@ lazy val root = (project in file("."))
 
       // CSV parsing (loading legacy file-based simulations)
       "com.github.tototoshi" %% "scala-csv" % "2.0.0",
+
+      "org.apache.pdfbox" % "pdfbox" % "3.0.8",
+      "org.yaml" % "snakeyaml" % "2.5",
+      "org.duckdb" % "duckdb_jdbc" % "2.0.0.1",
 
       // Test
       "org.scalatest" %% "scalatest"                    % scalaTestVersion % Test,

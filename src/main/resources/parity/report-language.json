@@ -1,0 +1,177 @@
+{
+  "METRIC_EN": {
+    "average_speed": "Mean speed (m/s)",
+    "percentage_of_track": "Occupancy (%)",
+    "average_vehicles": "Mean vehicles",
+    "km_traveled": "Distance travelled (km)",
+    "density_veh_km": "Density (veh/km)",
+    "speed_index": "Speed index (v/v free)",
+    "delay_index": "Delay index",
+    "peak_occupancy": "Peak occupancy (%)",
+    "congested_time_pct": "Congested time (%)"
+  },
+  "STR": {
+    "pt": {
+      "title": "SimEDaPE — resultados da estimação",
+      "variation": "Variação",
+      "mean_mape": "MAPE médio (%)",
+      "coverage": "Cobertura (%)",
+      "series": "Séries",
+      "ranking_caption": "Variações de estimação ordenadas pelo MAPE médio (as {top} melhores e as {top} piores).",
+      "baseline_note": "† linha de base: ignora a simulação parcial (reaproveita pesos e normalização do treino); serve de piso de comparação, não de estimador.",
+      "mape_caption": "MAPE (%) por variação e métrica.",
+      "agg_caption": "Erro agregado (%) por variação e métrica; positivo superestima.",
+      "robust_caption": "Medidas robustas de erro — {metric}.",
+      "worst_caption": "Piores séries de {method} — {metric}.",
+      "worst_cols": [
+        "Série",
+        "Real",
+        "Estimado",
+        "Erro (%)"
+      ],
+      "bd_caption": "Erro de {method} por {name} — {metric}.",
+      "bd_cols": [
+        "Séries",
+        "WAPE (%)",
+        "Viés (%)",
+        "Med. |erro| (%)"
+      ],
+      "by_cluster": "cluster",
+      "by_interval": "intervalo de tempo",
+      "by_length": "classe de comprimento da via",
+      "sweep_caption": "MAPE (%) por percentual da amostra — {metric}.",
+      "notation_caption": "Notação das variações de estimação.",
+      "notation_cols": [
+        "Notação",
+        "Descrição",
+        "Chave"
+      ],
+      "stats": [
+        [
+          "wape",
+          "WAPE (%)"
+        ],
+        [
+          "smape",
+          "sMAPE"
+        ],
+        [
+          "median_ape",
+          "Med. |erro| (%)"
+        ],
+        [
+          "bias_pct",
+          "Viés (%)"
+        ],
+        [
+          "rmse",
+          "RMSE"
+        ],
+        [
+          "pearson",
+          "Pearson"
+        ],
+        [
+          "spearman",
+          "Spearman"
+        ]
+      ],
+      "x_mape": "MAPE médio entre as métricas (%)",
+      "heat_title": "MAPE (%) por método e métrica (cor por coluna: verde = menor erro)",
+      "real": "real",
+      "estimated": "estimado",
+      "bd_title": "Erro por {name} — {method}",
+      "x_sweep": "percentual da amostra (%)",
+      "y_sweep": "MAPE (%) — {metric}",
+      "cover": [
+        "Variações comparadas: {n}",
+        "Métrica dos detalhes: {metric}",
+        "Variação detalhada: {method}",
+        "Barras hachuradas / †: linhas de base, que ignoram a parcial e servem de piso de comparação."
+      ],
+      "interp": "interpolação",
+      "eig": "filtro de autovalores"
+    },
+    "en": {
+      "title": "SimEDaPE — estimation results",
+      "variation": "Variation",
+      "mean_mape": "Mean MAPE (%)",
+      "coverage": "Coverage (%)",
+      "series": "Series",
+      "ranking_caption": "Estimation variations ranked by mean MAPE (the {top} best and the {top} worst).",
+      "baseline_note": "† baseline: ignores the partial simulation (reuses the training weights and normalization); it is a comparison floor, not an estimator.",
+      "mape_caption": "MAPE (%) by variation and metric.",
+      "agg_caption": "Aggregate error (%) by variation and metric; positive means overestimation.",
+      "robust_caption": "Robust error measures — {metric}.",
+      "worst_caption": "Worst series of {method} — {metric}.",
+      "worst_cols": [
+        "Series",
+        "Real",
+        "Estimated",
+        "Error (%)"
+      ],
+      "bd_caption": "Error of {method} by {name} — {metric}.",
+      "bd_cols": [
+        "Series",
+        "WAPE (%)",
+        "Bias (%)",
+        "Median |err.| (%)"
+      ],
+      "by_cluster": "cluster",
+      "by_interval": "time interval",
+      "by_length": "link-length class",
+      "sweep_caption": "MAPE (%) by sample percentage — {metric}.",
+      "notation_caption": "Notation of the estimation variations.",
+      "notation_cols": [
+        "Notation",
+        "Description",
+        "Key"
+      ],
+      "stats": [
+        [
+          "wape",
+          "WAPE (%)"
+        ],
+        [
+          "smape",
+          "sMAPE"
+        ],
+        [
+          "median_ape",
+          "Median |err.| (%)"
+        ],
+        [
+          "bias_pct",
+          "Bias (%)"
+        ],
+        [
+          "rmse",
+          "RMSE"
+        ],
+        [
+          "pearson",
+          "Pearson"
+        ],
+        [
+          "spearman",
+          "Spearman"
+        ]
+      ],
+      "x_mape": "Mean MAPE across metrics (%)",
+      "heat_title": "MAPE (%) by method and metric (colour per column: green = lowest error)",
+      "real": "real",
+      "estimated": "estimated",
+      "bd_title": "Error by {name} — {method}",
+      "x_sweep": "sample percentage (%)",
+      "y_sweep": "MAPE (%) — {metric}",
+      "cover": [
+        "Variations compared: {n}",
+        "Detail metric: {metric}",
+        "Detailed variation: {method}",
+        "Hatched bars / †: baselines, which ignore the partial and serve as a comparison floor."
+      ],
+      "interp": "interpolation",
+      "eig": "eigenvalue filter"
+    }
+  }
+}

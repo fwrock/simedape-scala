@@ -1,0 +1,37 @@
+name: Native SimEDaPE parity
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      SIMEDAPE_PROCESS_WORKERS: '2'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: simedape-scala
+      - uses: actions/checkout@v4
+        with:
+          repository: fwrock/tslearn4j
+          ref: 26b7e34603daff06f8a2b471545531178af6bd4b
+          path: tslearn4j
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: sbt/setup-sbt@v1
+      - name: Build Java kernels and install the Maven dependency
+        working-directory: tslearn4j
+        run: ./gradlew --no-daemon test publishToMavenLocal
+      - name: Verify native pipeline and package
+        working-directory: simedape-scala
+        run: sbt -batch -J-Xmx3G test assembly
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-test-reports
+          path: |
+            tslearn4j/build/test-results/test
+            simedape-scala/target/test-reports

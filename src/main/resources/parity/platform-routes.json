@@ -1,0 +1,465 @@
+[
+  {
+    "module": "experiments",
+    "path": "/api/experiments/status",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/schema",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/examples",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/templates",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/templates/<template_id>/render",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/validate",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/runs",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/runs",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/runs/<run_id>",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/runs/<run_id>/logs",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/runs/<run_id>/logs/<name>",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/runs/<run_id>/cancel",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/runs/<run_id>/interrupt",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/runs/<run_id>",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/runs/<run_id>/artifact",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/descriptors",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/descriptors/<name>",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/descriptors/<name>",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "module": "experiments",
+    "path": "/api/experiments/descriptors/<name>",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/locations",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/locations",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/locations/<location_id>",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/locations/<location_id>/test",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/locations/<location_id>/simulations",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/locations/<location_id>/scenarios",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/fs/browse",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/locations/suggestions",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/engines",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/engines",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/engines/<engine_id>",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/engines/<engine_id>/test",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/scenarios",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/scenarios/engine-path",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/scenarios/partial-config",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/partial/report",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/scenarios/config",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/scenarios/config",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/scenarios/engine-config",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/engine-settings",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/engine-settings/export",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "locations",
+    "path": "/api/engine-settings/profile",
+    "methods": [
+      "GET",
+      "PUT"
+    ]
+  },
+  {
+    "module": "modifications",
+    "path": "/api/schemas",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "modifications",
+    "path": "/api/modifications/actor",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "modifications",
+    "path": "/api/modifications",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "modifications",
+    "path": "/api/modifications/file",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "modifications",
+    "path": "/api/modifications/file",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "module": "modifications",
+    "path": "/api/modifications/validate",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "native",
+    "path": "/api/htc/scenarios",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "native",
+    "path": "/api/htc/runs",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "native",
+    "path": "/api/runs/<run_id>/native/live",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "native",
+    "path": "/api/runs/<run_id>/native/live/geometry",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "native",
+    "path": "/api/runs/<run_id>/native/live/ready",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "native",
+    "path": "/api/runs/<run_id>/native/series",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "native",
+    "path": "/api/runs/<run_id>/native/artifacts/<filename>",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "native",
+    "path": "/api/runs/<run_id>/native/replay",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "native",
+    "path": "/api/runs/<run_id>/native/replay/files/<filename>",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "osm_import",
+    "path": "/api/htc/osm/sources",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "osm_import",
+    "path": "/api/htc/osm/preview",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "osm_import",
+    "path": "/api/htc/osm/publish",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "scenario_editor",
+    "path": "/api/scenario-editor/drafts",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "scenario_editor",
+    "path": "/api/scenario-editor/drafts",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "scenario_editor",
+    "path": "/api/scenario-editor/drafts/<identity>",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "module": "scenario_editor",
+    "path": "/api/scenario-editor/drafts/<identity>",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "module": "scenario_editor",
+    "path": "/api/scenario-editor/drafts/<identity>/validate",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "scenario_editor",
+    "path": "/api/scenario-editor/drafts/<identity>/route",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "module": "scenario_editor",
+    "path": "/api/scenario-editor/drafts/<identity>/publish",
+    "methods": [
+      "POST"
+    ]
+  }
+]

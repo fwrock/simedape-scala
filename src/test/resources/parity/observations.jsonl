@@ -1,0 +1,12 @@
+{"run_id":"r0","vehicle_id":"1152921504606846977","link_id":"a","time_seconds":0,"event_type":"enter","sample_duration_seconds":null,"speed":null,"acceleration":null,"position":null,"gap":null,"leader_id":null}
+{"run_id":"r0","vehicle_id":"1152921504606846977","link_id":"a","time_seconds":6,"event_type":"exit","sample_duration_seconds":null,"speed":null,"acceleration":null,"position":null,"gap":null,"leader_id":null}
+{"run_id":"r0","vehicle_id":"1152921504606846977","link_id":"a","time_seconds":2,"event_type":"sample","sample_duration_seconds":2.0,"speed":0.0,"acceleration":-1.0,"position":0.0,"gap":5.0,"leader_id":"-1"}
+{"run_id":"r0","vehicle_id":"1152921504606846977","link_id":"a","time_seconds":4,"event_type":"sample","sample_duration_seconds":2.0,"speed":2.0,"acceleration":0.5,"position":10.0,"gap":4.0,"leader_id":"leader"}
+{"run_id":"r0","vehicle_id":"1152921504606846977","link_id":"a","time_seconds":6,"event_type":"sample","sample_duration_seconds":2.0,"speed":4.0,"acceleration":1.0,"position":20.0,"gap":3.0,"leader_id":"leader"}
+{"run_id":"r0","vehicle_id":"1152921504606846977","link_id":"a","time_seconds":4,"event_type":"lane_change","sample_duration_seconds":null,"speed":null,"acceleration":null,"position":null,"gap":null,"leader_id":null}
+{"run_id":"r0","vehicle_id":"v2","link_id":"b","time_seconds":1,"event_type":"enter","sample_duration_seconds":null,"speed":null,"acceleration":null,"position":null,"gap":null,"leader_id":null}
+{"run_id":"r0","vehicle_id":"v2","link_id":"b","time_seconds":7,"event_type":"exit","sample_duration_seconds":null,"speed":null,"acceleration":null,"position":null,"gap":null,"leader_id":null}
+{"run_id":"r0","vehicle_id":"v2","link_id":"b","time_seconds":3,"event_type":"sample","sample_duration_seconds":2.0,"speed":0.0,"acceleration":-1.0,"position":0.0,"gap":5.0,"leader_id":"-1"}
+{"run_id":"r0","vehicle_id":"v2","link_id":"b","time_seconds":5,"event_type":"sample","sample_duration_seconds":2.0,"speed":2.0,"acceleration":0.5,"position":10.0,"gap":4.0,"leader_id":"leader"}
+{"run_id":"r0","vehicle_id":"v2","link_id":"b","time_seconds":7,"event_type":"sample","sample_duration_seconds":2.0,"speed":4.0,"acceleration":1.0,"position":20.0,"gap":3.0,"leader_id":"leader"}
+{"run_id":"r0","vehicle_id":"v2","link_id":"b","time_seconds":5,"event_type":"lane_change","sample_duration_seconds":null,"speed":null,"acceleration":null,"position":null,"gap":null,"leader_id":null}
